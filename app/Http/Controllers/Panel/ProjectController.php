@@ -58,9 +58,10 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Project $project)
     {
-        //
+        
+        return view('panel.projects.edit', compact('project'));
     }
 
     /**
@@ -70,9 +71,16 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Project $project, Request $request)
     {
-        //
+
+
+        $project->description = $request->description;
+        $project->url = $request->url;
+
+        $project->save();
+
+        return redirect(route('projects.index'));
     }
 
     /**

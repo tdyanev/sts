@@ -8,6 +8,7 @@
     <th>Description</th>
     <th>URL</th>
     <th>created at</th>
+    <th>last update at</th>
     <th>action</th>
   </tr>
 </thead>
@@ -19,6 +20,7 @@
     <td>{{ $project->description }}</td>
     <td>{{ $project->url }}</td>
     <td>{{ $project->created_at->diffForHumans() }}</td>
+    <td>{{ $project->updated_at->diffForHumans() }}</td>
 
     <td>
     <a href="{{ route('projects.edit', [
