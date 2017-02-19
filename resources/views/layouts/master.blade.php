@@ -55,30 +55,28 @@
             </nav>
         </div>
         <div class="header-image container-fluid">
-            <h1>Header Content</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <polygon class="svg--sm" fill="#efefef" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
-                <polygon class="svg--lg" fill="#efefef" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
-            </svg>
+            <div class="blurred">
+                <h1>We will create your website</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon class="svg--sm" fill="#efefef" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
+                    <polygon class="svg--lg" fill="#efefef" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
+                </svg>
+            </div>
         </div>
     </header>
     @show
 
+    <!--
     <div class="container">
         @yield('content')
     </div>
-
-    <div class="container">
-        @section('sidebar')
-            This is the master sidebar.
-        @show
-    </div>
+    -->
     
-        @section('footer')
-          <footer>
-  
-          </footer>
-        @show
+    @section('footer')
+    <footer>
+        
+    </footer>
+    @show
   
     <!-- Scripts -->
     <script src="/js/app.js"></script>

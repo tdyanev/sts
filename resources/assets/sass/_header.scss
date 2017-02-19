@@ -29,19 +29,24 @@ header {
             padding: 0;
         
             li:first-child {
-                margin-left: 0; 
+                padding-left: 0; 
             }
             
             li {
                 display: inline;
                 list-style: none;
-                margin: 20px 0 0    40px;
                 position: relative;
             
                 a {
                     color: $link-default-color;
                     font-weight: bold;
+                    padding: 2*$distance;
                     text-decoration: none;
+                    width: 100%;
+                }
+                
+                a:first-child {
+                    padding-left: 0;
                 }
                 
                 a:hover {
@@ -53,23 +58,35 @@ header {
     
     .header-image {
         background-image: url(/images/wide-image.jpg);      //linear-gradient(#0085b5, #20358C);
+        background-position-y: -147px;
         border-top: 2px solid $laravel-border-color;
-        height: 200px;
+        height: 250px;
         padding: 0;
         position: relative;
+        
+        .blurred {
+            background: rgba(21, 52, 76, 0.75);
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
     }
     
     h1 {
         color: #fff;
-        padding: 50px 0;
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 5px;
+        padding: 70px 0;
         text-align: center;
+        text-transform: uppercase;
     }
     
     svg {
-        position: absolute;
         bottom: 0;
-        width: 100%;
         height: 25px;
+        position: absolute;
+        width: 100%;
     }
     
     @media (max-width: 699px) {
