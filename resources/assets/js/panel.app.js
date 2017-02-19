@@ -14,12 +14,16 @@ $.ajaxSetup({
 });
 
 $('.delete').on('click', function() {
+	var $row = $(this).closest('tr');
+	//console.log($row);
+
 	$.post({
         type: 'delete',
         url: this.href,
     }).done(function (data) {
         //alert('success');
-        console.log(data);
+        $row.fadeOut();
+        //console.log($row, data);
     });
 
 	return false;

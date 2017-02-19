@@ -22,26 +22,23 @@
 
 </head>
 <body>
-    <div class="container">
-        @section('header')
-            This is the master header.
-        @show
+    <div class="container-fluid">
+        <div class="row">
+            <div id="nav" class="col-md-2">
+                @section('header')
+                    <div class="list-group">
+                       <a href="{{ route('panel.home') }}" class="list-group-item">Home</a>
+                       <a href="{{ route('projects.index') }}" class="list-group-item">Projects</a>
+                    </div>
+                @show
+            </div>
+            <div class="col-md-10">
+                @yield('content')
+            </div>
+        </div>
     </div>
 
-    <div class="container">
-        @yield('content')
-    </div>
-
-    <div class="container">
-        @section('sidebar')
-            This is the master sidebar.
-        @show
-    </div>
-    
-        @section('footer')
-          <footer>foooooot</footer>
-        @show
-  
+   
     <!-- Scripts -->
     <script src="/js/panel.app.js"></script>
 </body>

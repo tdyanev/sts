@@ -1,6 +1,8 @@
 @extends('layouts.panel')
 
 @section('content')
+<h3>Projects</h3>
+<a href="{{ route('projects.create') }}">Add new</a>
 <table class="table table-bordered table-hover">
 <thead>
   <tr>
@@ -13,9 +15,9 @@
   </tr>
 </thead>
 <tbody>
-  <tr>
+  
    @foreach ($projects as $project)
-
+<tr>
     <td>{{ $project->id }}</td>
     <td>{{ $project->description }}</td>
     <td>{{ $project->url }}</td>

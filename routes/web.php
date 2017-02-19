@@ -18,7 +18,7 @@ Route::group([
 ], function() {
 	Auth::routes();
 
-	Route::get('/home', 'Panel\HomeController@index');
+	Route::get('/home', 'Panel\HomeController@index')->name('panel.home');
 	Route::resource('projects', 'Panel\ProjectController');
 });
 

@@ -17,6 +17,8 @@ class ProjectController extends Controller
     {
         $projects = Project::latest()->get();
 
+        //dd(\Input::get());
+
         return view('panel.projects.index', compact('projects'));
     }
 
@@ -27,7 +29,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        //$project = new Project();
+        return view('panel.projects.create');
     }
 
     /**
@@ -38,7 +41,9 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $project = new Project();
+
+        return $this->update($project, $request);
     }
 
     /**
@@ -89,8 +94,8 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Project $project)
     {
-        return 'trying to destroy '. $id;
+        //$project->delete();
     }
 }
