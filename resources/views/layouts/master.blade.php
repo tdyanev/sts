@@ -38,6 +38,10 @@
         @show
     </div>
     
+        @section('footer')
+          <footer>foooooot</footer>
+        @show
+  
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 </body>
