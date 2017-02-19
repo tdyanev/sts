@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'HomeController@index');
+
+Route::group([
+	'prefix' => 'panel'
+], function() {
+	Auth::routes();
+
+	Route::get('/home', 'Panel\HomeController@index');
+	Route::resource('projects', 'Panel\ProjectController');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
