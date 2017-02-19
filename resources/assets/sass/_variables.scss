@@ -1,6 +1,7 @@
 
 // Body
-$body-bg: #f5f8fa;
+$body-bg: #efefef;          //#f5f8fa;
+$distance: 20px;
 
 // Borders
 $laravel-border-color: darken($body-bg, 10%);
@@ -28,6 +29,8 @@ $navbar-default-bg: #fff;
 
 // Buttons
 $btn-default-color: $text-color;
+$link-default-color: #394753;
+$link-default-hover-color: #20358C;
 
 // Inputs
 $input-border: lighten($text-color, 40%);
