@@ -12,6 +12,12 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet" />
+    
+    
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    
 
     <!-- Scripts -->
     <script>
@@ -66,15 +72,64 @@
     </header>
     @show
 
-    <!--
+    <br /><br /><br /><br /><br />
     <div class="container">
         @yield('content')
     </div>
-    -->
+    <br /><br /><br /><br /><br />
     
     @section('footer')
     <footer>
-        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>
+                            <a>Web Site Development</a>
+                        </li>
+                        <li>
+                            <a>Search Engine Optimisation</a>
+                        </li>
+                        <li>
+                            <a>Graphical Design</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="social-networks">
+                        <li>
+                            <a class="facebook" href="#" title="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="google" href="#" title="Google+">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="twitter" href="#" title="Twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" title="Contact us" class="btn" type="button">Contact us</a>
+                </div>
+                <div class="col-md-4 contacts text-right">
+                    <h3>Contacts</h3>
+                    <ul>
+                        <li>Sofia, Bulgaria</li>
+                        <li>zh.k. Strelbishte, bl. 88</li>
+                        <li>+359 883 472 597</li>
+                        <li>office@sts2017.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&#169; STS 2017. All rights reserved.</p>
+        </div>
     </footer>
     @show
   
