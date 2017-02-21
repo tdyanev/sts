@@ -11,13 +11,8 @@
     <title>@yield('title')</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet" />
-    
-    
-    
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    
-    
+    <link href="/css/app.css" rel="stylesheet" />    
+    <link href="/css/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">  
 
     <!-- Scripts -->
     <script>
@@ -33,10 +28,10 @@
         <div class="wide-header container-fluid">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 logo">
+                    <div class="col-xs-6 logo">
                         <img src="/images/logo.png" alt="logo" />
                     </div>
-                    <div class="col-sm-6 contanct">
+                    <div class="col-xs-6 contact">
                         <div class="pull-right">Contact us on<br />+359 883 472 597</div>
                     </div>
                 </div>
@@ -46,16 +41,16 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#" title="">Home</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="#" title="">Services</a>
                     </li>
                     <li>
-                        <a href="#">Blog</a>
+                        <a href="#" title="">Blog</a>
                     </li>
                     <li>
-                        <a href="#">Contacts</a>
+                        <a href="#" title="">Contacts</a>
                     </li>
                 </ul>
             </nav>
@@ -82,21 +77,21 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4 services">
+                <div class="col-sm-4 col-xs-12 services">
                     <h3>Services</h3>
                     <ul>
                         <li>
-                            <a>Web Site Development</a>
+                            <a href="#" title="">Web Site Development</a>
                         </li>
                         <li>
-                            <a>Search Engine Optimisation</a>
+                            <a href="#" title="">Search Engine Optimisation</a>
                         </li>
                         <li>
-                            <a>Graphical Design</a>
+                            <a href="#" title="">Graphical Design</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4 col-xs-12">
                     <ul class="social-networks">
                         <li>
                             <a class="facebook" href="#" title="Facebook">
@@ -116,7 +111,7 @@
                     </ul>
                     <a href="#" title="Contact us" class="btn" type="button">Contact us</a>
                 </div>
-                <div class="col-md-4 contacts text-right">
+                <div class="col-sm-4 col-xs-12 contacts text-right">
                     <h3>Contacts</h3>
                     <ul>
                         <li>Sofia, Bulgaria</li>

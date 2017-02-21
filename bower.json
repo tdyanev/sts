@@ -1,0 +1,14 @@
+{
+  "name": "sts",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Smile <sisitymiteva@yahoo.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tdyanev/sts",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}

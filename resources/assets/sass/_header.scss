@@ -14,10 +14,21 @@ header {
             width: 135px;
         }
         
-        .contanct div {
+        .contact div {
             font-size: 19px;
             font-weight: 800;
             margin-top: 32px;
+        }
+        
+        @media (max-width: 399px) {
+            .contact div {
+                font-size: 12px;
+            }
+            
+            .logo img {
+                width: 100px;
+                height: 60px;
+            }
         }
     }
     
@@ -40,7 +51,7 @@ header {
                 a {
                     color: $link-default-color;
                     font-weight: bold;
-                    padding: 2*$distance;
+                    padding: $distance 2*$distance;
                     text-decoration: none;
                     width: 100%;
                 }
@@ -80,6 +91,12 @@ header {
         padding: 70px 0;
         text-align: center;
         text-transform: uppercase;
+    }
+    
+    @media (max-width: 399px) {
+        h1 {
+            padding: $distance;
+        }
     }
     
     svg {
