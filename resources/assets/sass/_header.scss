@@ -1,9 +1,8 @@
 header {
-    border-top: 7px solid $body-bg;
+    border-top: 7px solid $gray;
     margin-bottom: $distance;
     
     .wide-header {
-        background-color: #fff;
         border-bottom: 2px solid $laravel-border-color;
         border-top: 2px solid $laravel-border-color;
         height: 108px;
@@ -33,6 +32,7 @@ header {
     }
     
     .main-menu {
+        background-color: $gray;
         height: 60px;
         padding-top: $distance;
         
