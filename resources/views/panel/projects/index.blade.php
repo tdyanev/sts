@@ -7,10 +7,18 @@
 <thead>
   <tr>
     <th>#</th>
-    <th>Description</th>
-    <th>URL</th>
-    <th>created at</th>
-    <th>last update at</th>
+    <th>Description
+    @component('sort.links') description @endcomponent
+    </th>
+    <th>URL
+    @component('sort.links') url @endcomponent
+    </th>
+    <th>created at
+    @component('sort.links') created_at @endcomponent
+    </th>
+    <th>last update at
+    @component('sort.links') updated_at @endcomponent
+    </th>
     <th>action</th>
   </tr>
 </thead>
@@ -38,4 +46,8 @@
 
 </tbody>
 </table>
+
+<div class="center-block">
+{{ $projects->appends(['order' => $order, 'type' => $type])->links() }}
+</div>
 @endsection

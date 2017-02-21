@@ -13,13 +13,15 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $projects = Project::latest()->get();
+        $order = $request->input('order') ?? 'created_at';
+        $type  = $request->input('type') ?? 'desc';
 
-        //dd(\Input::get());
+        $projects = Project::orderBy($order, $type)->paginate(20);
 
-        return view('panel.projects.index', compact('projects'));
+
+        return view('panel.projects.index', compact('projects', 'order', 'type'));
     }
 
     /**
