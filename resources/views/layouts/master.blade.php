@@ -57,7 +57,7 @@
         </div>
         <div class="header-image container-fluid">
             <div class="blurred">
-                <h1>We will create your website</h1>
+                <h1><strong>We will create your website</strong></h1>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon class="svg--sm" fill="#efefef" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
                     <polygon class="svg--lg" fill="#efefef" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
@@ -111,13 +111,13 @@
                     </ul>
                     <a href="#" title="Contact us" class="btn" type="button">Contact us</a>
                 </div>
-                <div class="col-sm-4 col-xs-12 contacts text-right">
+                <div class="col-sm-4 col-xs-12 contacts text-right h-card">
                     <h3>Contacts</h3>
                     <ul>
-                        <li>Sofia, Bulgaria</li>
-                        <li>zh.k. Strelbishte, bl. 88</li>
-                        <li>+359 883 472 597</li>
-                        <li>office@sts2017.com</li>
+                        <li><span class="p-locality">Sofia</span>, <span class="p-country-name">Bulgaria</span></li>
+                        <li><span class="p-street-address">zh.k. Strelbishte, bl. 88</span></li>
+                        <li><span class="p-tel">+359 883 472 597</span></li>
+                        <li><span class="u-email">office@sts2017.com</span></li>
                     </ul>
                 </div>
             </div>
