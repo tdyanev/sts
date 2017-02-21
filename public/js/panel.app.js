@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "./";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 35);
+/******/ 	return __webpack_require__(__webpack_require__.s = 36);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -31576,10 +31576,11 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 32 */
+/* 32 */,
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
+/* WEBPACK VAR INJECTION */(function($) {
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -31588,6 +31589,29 @@ module.exports = function(module) {
 
 __webpack_require__(27);
 
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': window.Laravel.csrfToken
+  }
+});
+
+$('.delete').on('click', function () {
+  var $row = $(this).closest('tr');
+  //console.log($row);
+
+  $.post({
+    type: 'delete',
+    url: this.href
+  }).done(function (data) {
+    //alert('success');
+    $row.fadeOut();
+    //console.log($row, data);
+  });
+
+  return false;
+});
+
+//require('./jquery');
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -31600,20 +31624,15 @@ const app = new Vue({
     el: '#app'
 });
  */
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 33 */,
-/* 34 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 35 */
+/* 34 */,
+/* 35 */,
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(32);
-module.exports = __webpack_require__(34);
+module.exports = __webpack_require__(33);
 
 
 /***/ })
