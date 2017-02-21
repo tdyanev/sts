@@ -2,7 +2,7 @@
 
 @section('content')
   <form action="{{ route('projects.update', [
-    'id' => $project->id,
+    'id' => $projects->id,
   ]) }}" method="post">
 
   {{ method_field('PUT') }}
@@ -12,7 +12,7 @@
     'id' => 'description',
     'label' => 'Description',
   ])
-  {{ $project->description }}
+  {{ $projects->description }}
   @endcomponent
 
   @component('form.input', [
@@ -20,7 +20,7 @@
     'type' => 'text',
     'label' => 'URL',
   ])
-  {{ $project->url }}
+  {{ $projects->url }}
   @endcomponent
 
 
