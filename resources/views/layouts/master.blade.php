@@ -41,7 +41,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#" title="">Home</a>
+                        <a href="#" title="Home">Home</a>
                     </li>
                     <li>
                         <a href="#" title="">Services</a>
