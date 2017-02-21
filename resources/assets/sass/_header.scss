@@ -1,0 +1,120 @@
+header {
+    border-top: 7px solid $body-bg;
+    margin-bottom: $distance;
+    
+    .wide-header {
+        background-color: #fff;
+        border-bottom: 2px solid $laravel-border-color;
+        border-top: 2px solid $laravel-border-color;
+        height: 108px;
+
+        .logo img {
+            height: 80px;
+            margin-top: 10px;
+            width: 135px;
+        }
+        
+        .contact div {
+            font-size: 19px;
+            font-weight: 800;
+            margin-top: 32px;
+        }
+        
+        @media (max-width: 399px) {
+            .contact div {
+                font-size: 12px;
+            }
+            
+            .logo img {
+                width: 100px;
+                height: 60px;
+            }
+        }
+    }
+    
+    .main-menu {
+        height: 60px;
+        padding-top: $distance;
+        
+        ul {
+            padding: 0;
+        
+            li:first-child {
+                padding-left: 0; 
+            }
+            
+            li {
+                display: inline;
+                list-style: none;
+                position: relative;
+            
+                a {
+                    color: $link-default-color;
+                    font-weight: bold;
+                    padding: $distance 2*$distance;
+                    text-decoration: none;
+                    width: 100%;
+                }
+                
+                a:first-child {
+                    padding-left: 0;
+                }
+                
+                a:hover {
+                    color: $link-default-hover-color;
+                }
+            }
+        }
+    }
+    
+    .header-image {
+        background-image: url(/images/wide-image.jpg);      //linear-gradient(#0085b5, #20358C);
+        background-position-y: -147px;
+        border-top: 2px solid $laravel-border-color;
+        height: 250px;
+        padding: 0;
+        position: relative;
+        
+        .blurred {
+            background: rgba(21, 52, 76, 0.75);
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+    }
+    
+    h1 {
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 5px;
+        padding: 70px 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    @media (max-width: 399px) {
+        h1 {
+            padding: $distance;
+        }
+    }
+    
+    svg {
+        bottom: 0;
+        height: 25px;
+        position: absolute;
+        width: 100%;
+    }
+    
+    @media (max-width: 699px) {
+        .svg--lg {
+            display: none;
+        }
+    }
+    
+    @media (min-width: 700px) {
+        .svg--sm {
+            display: none;
+        }
+    }
+}
