@@ -1,2 +1,2 @@
-<a href="?order={{ $slot }}&type=asc">&#9650;</a>
-<a href="?order={{ $slot }}&type=desc">&#9660;</a>
+{{ $label }} <a href="?order={{ $column }}&type=asc">&#9650;</a>
+<a href="?order={{ $column }}&type=desc">&#9660;</a>

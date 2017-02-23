@@ -3,30 +3,69 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Schema;
 
-class CrudController extends Controller
-{
+class CrudController extends Controller {
 
-    protected $model  = null,
-    		  $offset = 20,
-    		  $table  = null,
-    		  $prefix = '',
-    		  $order  = 'created_at',
-    		  $type   = 'desc'
+    protected $model,
+    		  $perPage = 20,
+    		  $table   = null,
+    		  $prefix  = '',
+              $labels  = [],
+              $layout  = '',
+    		  $order   = 'created_at',
+    		  $type    = 'desc'
     ;
+
+    private $defaults = [
+        'perPage'    => 20,
+        'orderBy'    => 'created_at',
+        'orderType'  => 'desc',
+        'viewPrefix' => '',
+        
+    ];
+
+    private $viewDir = 'crud',
+            $fieds     = [];
+
+    private function _setup() {
+        $this->fields = (new $this->model)->getFillable();
+    }
+
+    private function _view($name) {
+        $view = $this->params['viewPrefix'] . '.'
+              . $this->table . '.' . $name;
+
+        return View::exists($view) ? $view :
+               $this->params['viewPrefix'] . '.'
+             . $this->viewDir . '.' . $name;
+    }
+
+    public function __construct($params) {
+        $this->params  = array_merge($this->defaults, $params);
+        $this->model   = $this->params['model'];
+        $this->table   = with(new $this->model)->getTable();
+        $this->columns = Schema::getColumnListing($this->table);
+    }
 
     public function index(Request $request)
     {
-        $order = $request->input('order') ?? $this->order;
-        $type  = $request->input('type') ?? $this->type;
+        $order = $request->input('order') ?? $this->params['orderBy'];
+        $type  = $request->input('type') ?? $this->params['orderType'];
 
-        $data = $this->model::orderBy($order, $type)->paginate($this->offset);
+        $data = $this->model::orderBy($order, $type)
+                     ->paginate($this->params['perPage']);
 
        	return view($this->_view('index'), [
-        	'order'      => $order,
-        	'type'       => $type,
-        	$this->table => $data,
+        	'order'   => $order,
+        	'type'    => $type,
+        	'data'    => $data,
+            'table'   => $this->table,
+            'columns' => $this->columns,
+            'labels'  => $this->params['labels'],
         ]);
+        
     }
 
     public function store(Request $request)
@@ -34,9 +73,10 @@ class CrudController extends Controller
         return $this->update(0, $request);
     }
 
-    private function _view($name) {
-    	return $this->prefix . '.' . $this->table . '.' . $name;
+    protected function getData() {
+        return $this->model::get();
     }
+
 
     public function create()
     {
@@ -58,7 +98,8 @@ class CrudController extends Controller
 
     public function update($id, Request $request)
     {
-    	$instance = $id === 0 ? new $this->model : $this->model::find($id);
+    	$instance = $id === 0 ? new $this->model :
+            $this->model::find($id);
 
     	$fillable = $instance->getFillable();
 
