@@ -49,6 +49,7 @@ header {
                 position: relative;
             
                 a {
+                    transition: 0.3s;
                     color: $link-default-color;
                     font-weight: bold;
                     padding: $distance 2*$distance;

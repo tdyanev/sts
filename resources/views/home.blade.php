@@ -44,14 +44,47 @@
             <h2>Latest news:</h2>
             <div class="row">
                 <div class="col-sm-4">
-                    <img src="/images/memories.jpg" alt="article-image" />
+                    <img src="/images/fuck yeah.png" alt="article-image" />
                 </div>
                 <div class="col-sm-8">
-                    <h3>What to do with your memories??</h3>
-                    <p>This problem has existed for a long time but a solution has never been found. The prior disadvantage of
-                    all these memories is that you don't know whether they help you or not, will you be able to use them ever or not?</p>
-                    <p>Scientists say that you should ...</p>
+                    <h3><strong>What to do with your memories?</strong></h3>
+                    <p>
+                        <?php
+                        $text = "This problem has existed for a long time but a solution has never been found. The prior disadvantage of
+                    all these memories is that you don't know whether they help you or not, will you be able to use them ever or not?                    Scientists say that you should .. This problem has existed for a long time but a solution has never been found. The prior disadvantage of all these memories is that you don't know whether they help you or not, will you be able to use them ever or not?   Scientists say that you should. Scientists say that you should. This problem has existed for a long time but a solution has never been found.";
+                        if(strlen($text) > 300) {
+                            echo substr($text, 0, 300)." ...";
+                        } else {
+                            echo $text;
+                        }
+                        ?>
+                    </p>
                     <a href="#" title="" class="read-more pull-right">Read more</a>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="article-sumed">
+        <div class="container latest-projects">
+            <h2>Latest projects:</h2>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3><strong>International Business & Consultation</strong></h3>
+                    <p>
+                        <?php
+                        $text = "Company web site for business consultations and administration.Company web site for business consultations and administration.Company web site for business consultations and administration.<br/><br/> Technologies used: Wordpress. Installed
+                        plugins: list with plugins to be done.";
+                        if(strlen($text) > 300) {
+                             echo substr($text, 0, 300)." ...";
+                        } else {
+                            echo $text;
+                        }
+                    ?>  
+                    </p>
+                    <a href="#" title="" class="read-more pull-left">Visit site</a>
+                </div>
+                <div class="col-sm-4">
+                    <img src="/images/ibc.png" alt="article-image" />
                 </div>
             </div>
         </div>

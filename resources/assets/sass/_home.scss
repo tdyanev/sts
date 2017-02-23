@@ -34,30 +34,53 @@
         box-shadow: none;
         //box-shadow: 10px 10px 5px #888888;
     }
+    
+    @media (max-width: 1199px) {
+        .box {
+            min-height: 310px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .box {
+            margin: 0 auto;
+            margin-bottom: 2*$distance+10;
+            width: 50%;
+        }
+    }
+    
+    @media (max-width: 560px) {
+        .box {
+            width: 100%;
+        }
+    }
 }
 
 .article-sumed {
     text-align: justify;
-    margin-bottom: $distance;
+    margin-bottom: 2*$distance;
+    
+    .latest-projects { 
+        border-top: 1px solid black;
+        padding-top: 2*$distance; 
+    }
     
     img {
-        height: 166px;
+        border: 1px solid black;
         margin: 0 $distance 2*$distance 0;
+        width: 100%;
     }
     
-    h3 {
-        margin-top: 0;
-    }
+    h3 { margin-top: 0; }
     
     .read-more {
         background: $link-default-hover-color;
         color: #fff;
         font-weight: bold;
+        margin-bottom: $distance/2;
         padding: 8px $distance;
         text-transform: uppercase;
     }
     
-    .read-more:hover {
-        text-decoration: none;
-    }
+    .read-more:hover { text-decoration: none; }
 }
