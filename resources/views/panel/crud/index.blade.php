@@ -7,12 +7,19 @@
 <table class="table table-bordered table-hover">
 <thead>
   <tr>
-    @for ($i = 0; $i < count($columns); $i++)
-        <th>@component('sort.links', [
-            'label'  => $labels[$i],
-            'column' => $columns[$i],
-        ]) @endcomponent</th>
-    @endfor
+    @foreach ($fields as $column => $field)
+        <th>
+            @if ($field->sortable)
+                @component('sort.links', [
+                    'label'  => $field->label,
+                    'column' => $column,
+                ])
+                @endcomponent
+            @else 
+                {{ $field->label }}
+            @endif
+        </th>
+    @endforeach
 
     <th>action</th>
   </tr>
@@ -23,9 +30,9 @@
 <tr>
     
 
-    @foreach ($columns as $field)
+    @foreach ($fields as $key => $val)
 
-    <td>{{ $item[$field] }}</td>
+    <td>{{ $item[$key] }}</td>
 
     @endforeach
 

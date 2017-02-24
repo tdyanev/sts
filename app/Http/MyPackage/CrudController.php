@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\MyPackage;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Schema;
+use App\Http\Controllers\Controller;
 
 class CrudController extends Controller {
 
@@ -37,7 +38,7 @@ class CrudController extends Controller {
         $this->table   = with(new $this->model)->getTable();
         $this->fields  = array_combine(
             Schema::getColumnListing($this->table),
-            $this->params['labels']
+            $this->params['fields']
         );
     }
 
@@ -54,8 +55,7 @@ class CrudController extends Controller {
         	'type'    => $type,
         	'data'    => $data,
             'table'   => $this->table,
-            'columns' => $this->columns,
-            'labels'  => $this->params['labels'],
+            'fields'  => $this->fields,
         ]);
         
     }
@@ -77,10 +77,11 @@ class CrudController extends Controller {
 
     private function _singleView($model = false) {
         return view($this->_view('single'), [
-            'table' => $this->table,
-            'data'  => $model ?? new $this->model,
+            'table'  => $this->table,
+            'data'   => $model ?? new $this->model,
             //''
-            'edit'  => (bool) $model,
+            'fields' => $this->fields,
+            'edit'   => (bool) $model,
         ]);
     }
 
