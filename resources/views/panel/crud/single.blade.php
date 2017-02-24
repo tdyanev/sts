@@ -25,35 +25,28 @@
 
   @foreach ($fields as $key => $field) 
     @if ($field->visible)
-      <p>make component with: type = {{ $field->type }} name = {{ $key }}, label = {{ $field->label }}</p>
+
+      @component('form.' . $field->type, [
+        'id' => $key,
+        'label' => $field->label,
+      ])
+
+      {{ $data[$key] }}
+      @endcomponent
+
+
+
     @endif
 
   @endforeach
 
-<!--
-  
 
-
-
-  @component('form.textarea', [
-    'id' => 'description',
-    'label' => 'Description',
-  ])
-
-  @endcomponent
-
-  @component('form.input', [
-    'id' => 'url',
-    'type' => 'text',
-    'label' => 'URL',
-  ])
-  @endcomponent
 
 
   <div class="form-group">
     <button type="submit" class="btn btn-default">Create</button>
   </div>
   </form>
--->
+
 </form>
 @endsection
