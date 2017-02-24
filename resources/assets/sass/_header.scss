@@ -31,40 +31,27 @@ header {
         }
     }
     
-    .main-menu {
-        background-color: $gray;
-        height: 60px;
-        padding-top: $distance;
+    .top-menu {
+        background: $gray;
+        margin: 0;
         
-        ul {
-            padding: 0;
+        #myNavbar { padding: 0; }
         
-            li:first-child {
-                padding-left: 0; 
-            }
-            
-            li {
-                display: inline;
-                list-style: none;
-                position: relative;
-            
-                a {
-                    transition: 0.3s;
-                    color: $link-default-color;
-                    font-weight: bold;
-                    padding: $distance 2*$distance;
-                    text-decoration: none;
-                    width: 100%;
-                }
+        ul li a {                    
+            color: $link-default-color;
+            font-weight: bold;
+            padding-right: 2*$distance;
+        }
                 
-                a:first-child {
-                    padding-left: 0;
-                }
+        a:first-child { padding-left: 0; }                
+        a.active { color: $link-default-hover-color; }
                 
-                a:hover {
-                    color: $link-default-hover-color;
-                }
-            }
+        .icon-bar {
+            background: $link-default-hover-color;
+        }
+        
+        @media (max-width: 768px) {
+            #myNavbar { padding: 0 15px; }
         }
     }
     

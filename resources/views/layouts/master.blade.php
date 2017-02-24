@@ -37,26 +37,27 @@
                 </div>
             </div>
         </div>
-        <div class="main-menu container-fluid">
+        <nav class="navbar top-menu">
+        <div class="container-fluid">
             <div class="container">
-            <nav class="navbar">
-                <ul>
-                    <li>
-                        <a href="#" title="Home">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" title="">Services</a>
-                    </li>
-                    <li>
-                        <a href="#" title="">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#" title="">Contacts</a>
-                    </li>
-                </ul>
-            </nav>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#" title="Home">Home</a></li>
+                        <li><a href="">Design</a></li>
+                        <li><a href="#">Local SEO</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </nav>
         <div class="header-image container-fluid">
             <div class="blurred">
                 <h1>We are here for you!</h1>
