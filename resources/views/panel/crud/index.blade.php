@@ -7,16 +7,16 @@
 <table class="table table-bordered table-hover">
 <thead>
   <tr>
-    @foreach ($fields as $column => $field)
+    @foreach ($fields as $field)
         <th>
-            @if ($field->sortable)
+            @if ($field->sortable())
                 @component('sort.links', [
-                    'label'  => $field->label,
-                    'column' => $column,
+                    'label'  => $field->label(),
+                    'column' => $field->name,
                 ])
                 @endcomponent
             @else 
-                {{ $field->label }}
+                {{ $field->label() }}
             @endif
         </th>
     @endforeach
@@ -30,9 +30,9 @@
 <tr>
     
 
-    @foreach ($fields as $key => $val)
+    @foreach ($fields as $field)
 
-    <td>{{ $item[$key] }}</td>
+    <td>{{ $item[$field->name] }}</td>
 
     @endforeach
 

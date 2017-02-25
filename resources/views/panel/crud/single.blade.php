@@ -10,7 +10,7 @@
       $method_field = method_field('PUT');
 
     } else {
-
+      $route = route($table. '.create');
       $method_field = '';
 
     }
@@ -24,17 +24,10 @@
 
 
   @foreach ($fields as $key => $field) 
-    @if ($field->visible)
+    @if ($field->editable())
 
-      @component('form.' . $field->type, [
-        'id' => $key,
-        'label' => $field->label,
-      ])
-
-      {{ $data[$key] }}
+      @component($field->path(), $field->form($data[$field->name]))
       @endcomponent
-
-
 
     @endif
 
@@ -44,7 +37,7 @@
 
 
   <div class="form-group">
-    <button type="submit" class="btn btn-default">Create</button>
+    <button type="submit" class="btn btn-default">Save</button>
   </div>
   </form>
 

@@ -36,10 +36,7 @@ class CrudController extends Controller {
         $this->params  = array_merge($this->defaults, $params);
         $this->model   = $this->params['model'];
         $this->table   = with(new $this->model)->getTable();
-        $this->fields  = array_combine(
-            Schema::getColumnListing($this->table),
-            $this->params['fields']
-        );
+        $this->fields  = $this->params['fields'];
     }
 
     public function index(Request $request)
