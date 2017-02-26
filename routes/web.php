@@ -15,11 +15,12 @@ Route::get('/', 'HomeController@index');
 
 Route::group([
 	'prefix' => 'panel',
+	'namespace' => 'Panel',
 	//'middleware' => 'auth',
 ], function() {
 	Auth::routes();
 
-	Route::get('/home', 'Panel\HomeController@index')->name('panel.home');
-	Route::resource('projects', 'Panel\ProjectController');
+	Route::get('/home', 'HomeController@index')->name('panel.home');
+	Route::resource('projects', 'ProjectController');
 });
 

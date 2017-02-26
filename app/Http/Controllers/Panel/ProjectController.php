@@ -4,17 +4,46 @@ namespace App\Http\Controllers\Panel;
 
 use Illuminate\Http\Request;
 
-use App\Http\MyPackage\CrudController;
-use App\Http\MyPackage\TableField;
+use Stsbg\AdminCrud\CrudController;
+use Stsbg\AdminCrud\Form;
 
 class ProjectController extends CrudController
 {
    
     public function __construct() {
-        parent::__construct([
-            'model'   => \App\Project::class,
-            'viewPrefix'  => 'panel',
+        parent::__construct(\App\Project::class, [
+            new Form\KeyField('id', '#', [
+                'sortable' => true,
+            ]),
+
+            new Form\StringField('title', 'Title', [
+                'sortable' => true,
+            ]),
+
+            new Form\StringField('url', 'URL', [
+                'sortable' => true,
+            ]),
+
+            new Form\TextField('description', 'Description', [
+                'sortable'          => true,
+                'text_trunc_length' => 30,
+            ]),
+
+            new Form\UploadField('image', 'Image', [
+                'sortable'          => false,
+                //'text_trunc_length' => 30,
+            ]),
+
+            new Form\DateField('created_at', 'Created at', [
+                'sortable' => true,
+            ]),
+
+            new Form\DateField('updated_at', 'Updated at', [
+                'sortable' => true,
+            ]),
+        ], [
             'perPage' => 10,
+            /*
             'fields'  => [
                 new TableField('id', [
                     'label'    => '#',
@@ -56,8 +85,9 @@ class ProjectController extends CrudController
                     'sortable' => true,
                     
                 ]),
+                
 
-            ],
+            ],*/
         ]);
 
 

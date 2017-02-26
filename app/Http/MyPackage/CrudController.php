@@ -24,19 +24,19 @@ class CrudController extends Controller {
     //}
 
     private function _view($name) {
-        $view = $this->params['viewPrefix'] . '.'
-              . $this->table . '.' . $name;
+        $view = $this->params['viewPrefix'] . '.' .
+                $this->table . '.' . $name;
 
         return View::exists($view) ? $view :
-               $this->params['viewPrefix'] . '.'
-             . $this->viewDir . '.' . $name;
+               $this->params['viewPrefix'] . '.' .
+               $this->viewDir . '.' . $name;
     }
 
-    public function __construct($params) {
+    public function __construct($model, $fields, $params) {
         $this->params  = array_merge($this->defaults, $params);
-        $this->model   = $this->params['model'];
+        $this->model   = $model;
         $this->table   = with(new $this->model)->getTable();
-        $this->fields  = $this->params['fields'];
+        $this->fields  = $fields;
     }
 
     public function index(Request $request)
