@@ -1,9 +1,8 @@
 header {
-    border-top: 7px solid $body-bg;
+    border-top: 7px solid $gray;
     margin-bottom: $distance;
     
     .wide-header {
-        background-color: #fff;
         border-bottom: 2px solid $laravel-border-color;
         border-top: 2px solid $laravel-border-color;
         height: 108px;
@@ -32,39 +31,81 @@ header {
         }
     }
     
-    .main-menu {
-        height: 60px;
-        padding-top: $distance;
+    .top-menu {
+        background: $gray;
+        margin: 0;
         
-        ul {
-            padding: 0;
+        #myNavbar { padding: 0; }
         
-            li:first-child {
-                padding-left: 0; 
-            }
-            
-            li {
-                display: inline;
-                list-style: none;
-                position: relative;
-            
-                a {
-                    color: $link-default-color;
-                    font-weight: bold;
-                    padding: $distance 2*$distance;
-                    text-decoration: none;
-                    width: 100%;
-                }
-                
-                a:first-child {
-                    padding-left: 0;
-                }
-                
-                a:hover {
-                    color: $link-default-hover-color;
-                }
-            }
+        ul li a {                    
+            color: $link-default-color;
+            font-weight: bold;
+            padding-right: 2*$distance;
         }
+                
+        a:first-child { padding-left: 0; }                
+        a.active { color: $link-default-hover-color; }
+                
+        .icon-bar {
+            background: $link-default-hover-color;
+        }
+        
+        @media (max-width: 768px) {
+            #myNavbar { padding: 0 15px; }
+        }
+    }
+    
+    .header-color {
+        height: 90px;
+        background: #20358c;
+        
+        h1 {
+            padding: 0;
+            text-align: left;
+        }
+        
+        .moving-ball, .moving-ball2 {
+            background-color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            height: 26px;
+            position: relative;
+            width: 26px;
+            -webkit-animation-name: movingBall; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+            animation-name: movingBall;
+            animation-timing-function: linear;
+            animation-duration: 9s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        .moving-ball2 {animation-delay: 3s; }
+        
+        @keyframes movingBall {
+            0%   {background-color:#cf9da8; left:0px; top:0px;}
+            100% {background-color:#af5d6f; left:98%; top:0px;}
+        }
+        
+        /*
+        .animation {
+            animation: width 6s infinite linear;
+            border-style: solid;
+            border-width: 0;
+            border-color: transparent #fff;
+            height: 90px;
+            width: 14px;
+        }
+        
+        @keyframes width {
+            0% {border-width:1em 1em 0 0;}
+            25% {border-width:0 1em 1em 0;}
+            50% {border-width:0 0 1em 1em;}
+            75% {border-width:1em 0 0 1em;}
+            100% {border-width:1em 1em 0 0;}
+        }
+        */
     }
     
     .header-image {
