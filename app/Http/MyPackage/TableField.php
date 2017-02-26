@@ -8,42 +8,42 @@ class TableField {
 
 	protected $defaults = [
 		'sortable' => false,
+		'params'   => [],
+		'upload'   => false,
 
-	], $params;
+	], $config;
 
 	public $name;
     
-    public function __construct($name, $params = []) {
+    public function __construct($name, $config = []) {
 
     	$this->name   = $name;
-    	$this->params = array_merge($this->defaults, $params);
+    	$this->config = array_merge($this->defaults, $config);
 
     }
 
     public function sortable() {
-    	return $this->params['sortable'];
+    	return $this->config['sortable'];
     }
 
     public function label() {
-    	return $this->params['label'];
+    	return $this->config['label'];
     }
 
     public function editable() {
-    	return isset($this->params['form']);
+    	return isset($this->config['component']);
     }
 
-    public function path() {
-    	return 'form.' . $this->params['form']['type'];
+    public function component() {
+    	return 'form.' . $this->config['component'];
     }
 
-    public function form($value) {
-    	
-    	return [
-    		'attrs' => $this->params['form']['attrs'],
+    public function params($value) {
+    	return array_merge([
     		'name'  => $this->name,
-    		'label' => $this->params['label'],
+    		'label' => $this->config['label'],
     		'value' => $value ?? '',
-    	];
+    	], $this->config['params']);
   
     }
 }

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Panel;
 use Illuminate\Http\Request;
 
 use App\Http\MyPackage\CrudController;
-use App\Http\MyPackage\Field;
 use App\Http\MyPackage\TableField;
 
 class ProjectController extends CrudController
@@ -25,36 +24,26 @@ class ProjectController extends CrudController
                 new TableField('title', [
                     'label'    => 'Title',
                     'sortable' => true,
-                    'form'     => [
-                        'type' => 'input',
-                        'attrs' => 'type="text"',
-                    ],
+                    'component'=> 'string',
                 ]),
 
                 new TableField('description', [
                     'label'     => 'Description',
                     'sortable'  => true,
-                    'formz'      => [
-                        'type'  => 'textarea',
-                        'attrs' => 'rows="5" cols="30"',
-                    ],
-                    
+                    'component' => 'text',                   
                 ]),
 
                 new TableField('image', [
-                    'label'    => 'Image',
-                    'formz'     => [
-
-                    ],
+                    'label'     => 'Image',
+                    'component' => 'upload',
+                    'upload'    => true,
                     
                 ]),
 
                 new TableField('url', [
                     'label'    => 'URL',
                     'sortable' => true,
-                    'formz'     => [
-
-                    ],
+                    'component'=> 'string',
                     
                 ]),
                 new TableField('created_at', [
@@ -75,6 +64,17 @@ class ProjectController extends CrudController
         //$this->_setup();
     }
     
+    /*
+    parent::__construct(Model::class, [
+        new Form\Dummy('id, '#', [
+            'sortable' => true,
+        ]),
+        new Form\String('title', 'Title', [
+            'sortable' => true,
+        ]),
+    
+    ]);
 
+    */
 
 }

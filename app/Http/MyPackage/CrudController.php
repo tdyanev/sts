@@ -96,8 +96,26 @@ class CrudController extends Controller {
     	$fillable = $instance->getFillable();
 
     	foreach ($fillable as $field) {
-    		$instance[$field] = $request[$field];
+            if (isset($request[$field])) {
+    		  $instance[$field] = $request[$field];
+            }
+
+
     	}
+
+        /*
+        foreach ($fields as $field) {
+            $result = $field->store($request[$field->id]);
+
+            if ($result) {
+                $instance[$field->id] = $result;
+            }
+
+        }
+        */
+
+        //dd(isset($request->image));
+
 
         $instance->save();
 
