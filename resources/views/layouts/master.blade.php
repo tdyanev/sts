@@ -22,7 +22,7 @@
     </script>
 
 </head>
-<body>
+<body class="other-page">
     @section('header')
     <header>
         <div class="wide-header container-fluid">
@@ -38,26 +38,27 @@
             </div>
         </div>
         <nav class="navbar top-menu">
-        <div class="container-fluid">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#" title="Home">Home</a></li>
-                        <li><a href="">Design</a></li>
-                        <li><a href="#">Local SEO</a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#" title="Home">Home</a></li>
+                            <li><a href="">Design</a></li>
+                            <li><a href="#">Local SEO</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+        <!--
         <div class="header-image container-fluid">
             <div class="blurred">
                 <h1>We are here for you!</h1>
@@ -65,6 +66,16 @@
                     <polygon class="svg--sm" fill="#fff" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
                     <polygon class="svg--lg" fill="#fff" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
                 </svg>
+            </div>
+        </div>
+        -->
+        <div class="header-color container-fluid">
+            <div class="container">
+                <div class="blurred">
+                    <h1>Graphic Design</h1>
+                    <div class="moving-ball"></div>
+                    <div class="moving-ball2"></div>
+                </div>
             </div>
         </div>
     </header>

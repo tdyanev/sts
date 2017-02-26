@@ -55,6 +55,59 @@ header {
         }
     }
     
+    .header-color {
+        height: 90px;
+        background: #20358c;
+        
+        h1 {
+            padding: 0;
+            text-align: left;
+        }
+        
+        .moving-ball, .moving-ball2 {
+            background-color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            height: 26px;
+            position: relative;
+            width: 26px;
+            -webkit-animation-name: movingBall; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+            animation-name: movingBall;
+            animation-timing-function: linear;
+            animation-duration: 9s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        .moving-ball2 {animation-delay: 3s; }
+        
+        @keyframes movingBall {
+            0%   {background-color:#cf9da8; left:0px; top:0px;}
+            100% {background-color:#af5d6f; left:98%; top:0px;}
+        }
+        
+        /*
+        .animation {
+            animation: width 6s infinite linear;
+            border-style: solid;
+            border-width: 0;
+            border-color: transparent #fff;
+            height: 90px;
+            width: 14px;
+        }
+        
+        @keyframes width {
+            0% {border-width:1em 1em 0 0;}
+            25% {border-width:0 1em 1em 0;}
+            50% {border-width:0 0 1em 1em;}
+            75% {border-width:1em 0 0 1em;}
+            100% {border-width:1em 1em 0 0;}
+        }
+        */
+    }
+    
     .header-image {
         background-image: url(/images/wide-image.jpg);      //linear-gradient(#0085b5, #20358C);
         background-position-y: -147px;
