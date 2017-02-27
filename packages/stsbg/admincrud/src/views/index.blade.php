@@ -9,7 +9,7 @@
     @foreach ($fields as $field)
         <th>
             @if ($field->sortable())
-                @component('sort.links', [
+                @component($namespace . '::sort', [
                     'label'  => $field->label,
                     'column' => $field->name,
                 ])
@@ -31,7 +31,7 @@
 
     @foreach ($fields as $field)
 
-        <td>{{ $field->print($item[$field->name]) }}</td>
+        <td>{!! $field->print($item[$field->name]) !!}</td>
 
     @endforeach
 

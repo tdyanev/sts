@@ -5,27 +5,35 @@ namespace Stsbg\AdminCrud\Form;
 //use Stsbg\AdminCrud\Traits\StringFormatter;
 //use Illuminate\Support\Facades\View;
 
-class UploadField extends BaseField {
+class ImageUploadField extends UploadField {
 
     public function __construct($a, $b, $c) {
 
         parent::__construct($a, $b, array_merge([
-            'extensions' => '',
-            'sortable'   => false,
-            'view'       => 'upload',
-            'directory'  => 'upload',
+            'extensions' => ['jpg', 'png', 'gif'],
+            'width' => 'auto',
+            'height' => 'auto',
         ], $c));
 
     }
 
     public function print($value) {
-        return $value;
-        //return '<img src=' . asset('storage/' . $value) . ' />';
+        return '<img width="' . $this->config['width'] . '"
+            height="' . $this->config['height'] . '"
+            src=' . asset('storage/' . $value) . ' />';
 
         //return parent::print($this->config['carbon_method']($date));
     }
 
+    public function validate($file) {
+        return in_array($file->extension(), $this->config['extensions']);
+    }
+
     public function store($file) {
+        $extension = $file->extension();
+
+        //dd($extension);
+
         return $file->store($this->config['directory']);
     }
 

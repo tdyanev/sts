@@ -43,6 +43,9 @@ abstract class BaseField {
         //return $this->config['view'];
     }
 
+    public function validate($value) {
+        return true;
+    }
 
     public function params() {
         return $this->config;

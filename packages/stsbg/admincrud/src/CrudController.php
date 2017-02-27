@@ -73,10 +73,6 @@ class CrudController extends BaseController {
         $this->model::find($id)->delete();
     }
 
-
-    // EDIT ALL BELOW
-
-
     public function update($id, Request $request)
     {
     	$instance = $id === 0 ? new $this->model :
@@ -88,6 +84,8 @@ class CrudController extends BaseController {
         $fields = array_filter($this->fields, function($e) {
             return $e->editable();
         });
+
+
 
         foreach ($fields as $field) {
             $instance[$field->name] = $field->store($request[$field->name]);
@@ -123,6 +121,6 @@ class CrudController extends BaseController {
 
         $instance->save();
 
-        return redirect(route($this->table . '.index'));
+        return redirect(route($this->params['table'] . '.index'));
     }
 }

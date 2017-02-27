@@ -29,9 +29,8 @@ class ProjectController extends CrudController
                 'text_trunc_length' => 30,
             ]),
 
-            new Form\UploadField('image', 'Image', [
-                'sortable'          => false,
-                //'text_trunc_length' => 30,
+            new Form\ImageUploadField('image', 'Image', [
+                'width' => 100,
             ]),
 
             new Form\DateField('created_at', 'Created at', [
