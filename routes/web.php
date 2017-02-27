@@ -22,5 +22,6 @@ Route::group([
 
 	Route::get('/home', 'Panel\HomeController@index')->name('panel.home');
 	Route::resource('projects', 'Panel\ProjectController');
+	Route::resource('blogs', 'Panel\BlogController');
 });
 
