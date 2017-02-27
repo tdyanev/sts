@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet" />    
+    <link href="/css/animate.css" rel="stylesheet" />    
     <link href="/css/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">  
 
     <!-- Scripts -->
@@ -52,6 +53,7 @@
                             <li class="active"><a href="#" title="Home">Home</a></li>
                             <li><a href="">Design</a></li>
                             <li><a href="#">Local SEO</a></li>
+                            <li><a href="/team" title="">Team</a></li>
                             <li><a href="#">Contacts</a></li>
                         </ul>
                     </div>
@@ -72,12 +74,15 @@
         <div class="header-color container-fluid">
             <div class="container">
                 <div class="blurred">
-                    <h1>Graphic Design</h1>
+                    <h1>Our team</h1>
+                    <!--
                     <div class="moving-ball"></div>
                     <div class="moving-ball2"></div>
+                    -->
                 </div>
             </div>
         </div>
+        
     </header>
     
     @show

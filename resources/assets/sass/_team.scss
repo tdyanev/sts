@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .team .person {
+        border-bottom: 1px solid black;
+        margin-bottom: 2*$distance;
+    }
+    
+    .team .person:last-child {
+        border-bottom: none;
+    }
+}

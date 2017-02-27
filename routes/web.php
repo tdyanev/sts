@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('/team', function(){
+    return view('team');
+});
 
 Route::group([
 	'prefix' => 'panel'
