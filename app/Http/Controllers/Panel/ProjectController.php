@@ -42,7 +42,8 @@ class ProjectController extends CrudController
                 'sortable' => true,
             ]),
         ], [
-            'perPage' => 10,
+            'perPage'   => 10,
+            'hasUpload' => true,
             /*
             'fields'  => [
                 new TableField('id', [

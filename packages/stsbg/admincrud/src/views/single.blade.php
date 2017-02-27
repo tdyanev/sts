@@ -17,7 +17,7 @@
 
   @endphp
 
-  <form action="{{ $route }}" method="post">
+  <form action="{{ $route }}" method="post"@if ($hasUpload) enctype="multipart/form-data">@else > @endif
 
   {{ $method_field }}
   {{ csrf_field() }}

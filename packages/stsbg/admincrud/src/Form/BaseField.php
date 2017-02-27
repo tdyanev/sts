@@ -2,7 +2,6 @@
 
 namespace Stsbg\AdminCrud\Form;
 
-use Illuminate\Http\Request;
 
 abstract class BaseField {
     private $defaults = [
@@ -53,9 +52,8 @@ abstract class BaseField {
         return $this->config['sortable'];
     }
 
-    public function store(Request $request) {
-        $key = $this->name;
-        return $request->$key;
+    public function store($value) {
+        return $value;
     }
 
     /*

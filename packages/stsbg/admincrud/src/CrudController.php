@@ -63,7 +63,7 @@ class CrudController extends BaseController {
         return $this->_view('single', [
             
             'data'   => $model ?? new $this->model,
-            //''
+            'hasUpload' => $this->config['hasUpload'],
             'fields' => $this->fields,
             'edit'   => (bool) $model,
         ]);
@@ -90,12 +90,13 @@ class CrudController extends BaseController {
         });
 
         foreach ($fields as $field) {
-            $instance[$field->name] = $field->store($request);
+            $instance[$field->name] = $field->store($request[$field->name]);
 
 
         }
 
-        dd($instance);
+        //dd($request->image);
+
 
  /*
     	foreach ($fillable as $field) {

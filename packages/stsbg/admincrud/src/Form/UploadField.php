@@ -2,8 +2,6 @@
 
 namespace Stsbg\AdminCrud\Form;
 
-use Illuminate\Http\Request;
-
 //use Stsbg\AdminCrud\Traits\StringFormatter;
 //use Illuminate\Support\Facades\View;
 
@@ -21,16 +19,12 @@ class UploadField extends BaseField {
     }
 
     public function print($value) {
-        return 'uploaded file';
+        return '<img src=' . asset('storage/' . $value) . ' />';
+
         //return parent::print($this->config['carbon_method']($date));
     }
 
-    public function store(Request $request) {
-        $file = $request->image->path();
-
-        dd($file);
-
-
+    public function store($file) {
         return $file->store($this->config['directory']);
     }
 
