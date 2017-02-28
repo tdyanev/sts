@@ -80,6 +80,10 @@ class CrudController extends BaseController {
         //dd($request);
     }
 
+    public function prepare(& $instance) {
+
+    }
+
     public function update($id, Request $request)
     {
     	$instance = $id === 0 ? new $this->model :
@@ -101,8 +105,11 @@ class CrudController extends BaseController {
             }
         }
 
+        $this->prepare($instance);
+
         $instance->save();
 
-        return redirect(route($this->params['table'] . '.index'));
+        return redirect(route($this->params['routePrefix']
+            . $this->params['table'] . '.index'));
     }
 }
