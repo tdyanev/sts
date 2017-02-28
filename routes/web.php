@@ -24,21 +24,26 @@ Route::get('/web-development', function(){
 Route::get('/design', function(){
     return view('design');
 });
-Route::get('/projects', function(){
-    return view('projects');
-});
+
 Route::get('/contacts', function(){
     return view('contacts');
 });
 
+
+Route::resource('projects', 'ProjectController', [
+	'only' => [ 'index', 'show']
+]);
+
+
 Route::group([
 	'prefix' => 'panel',
+	'as' => 'panel.',
 	//'namespace' => 'Panel',
 	//'middleware' => 'auth',
 ], function() {
 	Auth::routes();
 
-	Route::get('/home', 'Panel\HomeController@index')->name('panel.home');
+	Route::get('/home', 'Panel\HomeController@index')->name('home');
 	Route::resource('projects', 'Panel\ProjectController');
 	Route::resource('blogs', 'Panel\BlogController');
 });

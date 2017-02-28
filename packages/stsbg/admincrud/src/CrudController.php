@@ -20,9 +20,12 @@ class CrudController extends BaseController {
         $this->fields    = $fields;
         
         $this->params    = [
-            'namespace' => $this->config['namespace'],
-            'table'     => with(new $this->model)->getTable(),
+            'namespace'   => $this->config['namespace'] . '::',
+                //. $this->config['routePrefix'],
+            'table'       => with(new $this->model)->getTable(),
+            'routePrefix' => $this->config['routePrefix'],
         ];
+        //dd($this->params);
     }
 
     public function index(Request $request)
