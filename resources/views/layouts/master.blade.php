@@ -30,7 +30,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-6 logo">
-                        <img src="/images/logo.png" alt="logo" />
+                        <a href="/" title="Home"><img src="/images/logo.png" alt="logo" /></a>
                     </div>
                     <div class="col-xs-6 contact">
                         <div class="pull-right">Contact us on<br />+359 883 472 597</div>
@@ -50,11 +50,13 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#" title="Home">Home</a></li>
-                            <li><a href="">Design</a></li>
-                            <li><a href="#">Local SEO</a></li>
-                            <li><a href="/team" title="">Team</a></li>
-                            <li><a href="#">Contacts</a></li>
+                            <li class="active"><a href="/" title="Home">Home</a></li>
+                            <li><a href="/web-development" title="Web Development">Web Development</a></li>
+                            <li><a href="/design" title="Design">Design</a></li>
+                            <li><a href="/seo">SEO</a></li>
+                            <li><a href="/team" title="Team">Team</a></li>
+                            <li><a href="/projects" title="Projects">Projects</a></li>
+                            <li><a href="/contacts" title="Contacts">Contacts</a></li>
                         </ul>
                     </div>
                 </div>
@@ -74,7 +76,7 @@
         <div class="header-color container-fluid">
             <div class="container">
                 <div class="blurred">
-                    <h1>Our team</h1>
+                    <h1>page title</h1>
                     <!--
                     <div class="moving-ball"></div>
                     <div class="moving-ball2"></div>
@@ -98,13 +100,13 @@
                     <h3>Services</h3>
                     <ul>
                         <li>
-                            <a href="#" title="">Web Site Development</a>
+                            <a href="/web-development" title="Web Development">Web Site Development</a>
                         </li>
                         <li>
-                            <a href="#" title="">Search Engine Optimisation</a>
+                            <a href="/seo" title="SEO">Search Engine Optimisation</a>
                         </li>
                         <li>
-                            <a href="#" title="">Graphical Design</a>
+                            <a href="/design" title="Design">Graphical Design</a>
                         </li>
                     </ul>
                 </div>
@@ -126,7 +128,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="#" title="Contact us" class="btn" type="button">Contact us</a>
+                    <a href="/contacts" title="Contact us" class="btn" type="button">Contact us</a>
                 </div>
                 <div class="col-sm-4 col-xs-12 contacts text-right h-card">
                     <h3>Contacts</h3>
