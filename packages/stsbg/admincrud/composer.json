@@ -1,0 +1,14 @@
+{
+    "name": "stsbg/admincrud",
+    "description": "Admin CRUD for Laravel 5",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tihomir Yanev",
+            "email": "tdyanev@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
