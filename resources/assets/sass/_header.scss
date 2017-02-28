@@ -56,8 +56,9 @@ header {
     }
     
     .header-color {
-        height: 90px;
         background: #20358c;
+        height: 90px;
+        margin-bottom: 2*$distance;
         
         h1 {
             padding: 0;
