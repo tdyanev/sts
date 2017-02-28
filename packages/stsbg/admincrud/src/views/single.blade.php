@@ -17,6 +17,13 @@
 
   @endphp
 
+  @component($namespace . '::errors', [
+    'errors' => $errors,
+  ])
+  @endcomponent
+
+
+
   <form action="{{ $route }}" method="post"@if ($hasUpload) enctype="multipart/form-data">@else > @endif
 
   {{ $method_field }}

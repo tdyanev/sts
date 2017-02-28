@@ -73,51 +73,30 @@ class CrudController extends BaseController {
         $this->model::find($id)->delete();
     }
 
+    public function verify_data(Request $request) {
+        //dd($request);
+    }
+
     public function update($id, Request $request)
     {
     	$instance = $id === 0 ? new $this->model :
             $this->model::find($id);
 
-    	$fillable = $instance->getFillable();
 
+        $this->verify_data($request);    
 
         $fields = array_filter($this->fields, function($e) {
             return $e->editable();
         });
 
 
-
         foreach ($fields as $field) {
-            $instance[$field->name] = $field->store($request[$field->name]);
+            $value = $field->store($request[$field->name]);
 
-
-        }
-
-        //dd($request->image);
-
-
- /*
-    	foreach ($fillable as $field) {
-            if (isset($request[$field])) {
-    		  $instance[$field] = $request[$field];
+            if ($value !== false) {
+                $instance[$field->name] = $value;
             }
-
-
-    	}
-
-       
-        foreach ($fields as $field) {
-            $result = $field->store($request[$field->id]);
-
-            if ($result) {
-                $instance[$field->id] = $result;
-            }
-
         }
-        */
-
-        //dd(isset($request->image));
-
 
         $instance->save();
 

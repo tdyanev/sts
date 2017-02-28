@@ -6,10 +6,13 @@ use Illuminate\Http\Request;
 
 use Stsbg\AdminCrud\CrudController;
 use Stsbg\AdminCrud\Form;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+
 
 class ProjectController extends CrudController
 {
-   
+   use ValidatesRequests;
+
     public function __construct() {
         parent::__construct(\App\Project::class, [
             new Form\KeyField('id', '#', [
@@ -18,6 +21,7 @@ class ProjectController extends CrudController
 
             new Form\StringField('title', 'Title', [
                 'sortable' => true,
+                //'validation' => 'required|max:255',
             ]),
 
             new Form\StringField('url', 'URL', [
@@ -43,68 +47,14 @@ class ProjectController extends CrudController
         ], [
             'perPage'   => 10,
             'hasUpload' => true,
-            /*
-            'fields'  => [
-                new TableField('id', [
-                    'label'    => '#',
-                    'sortable' => true,
-                ]),
-
-                new TableField('title', [
-                    'label'    => 'Title',
-                    'sortable' => true,
-                    'component'=> 'string',
-                ]),
-
-                new TableField('description', [
-                    'label'     => 'Description',
-                    'sortable'  => true,
-                    'component' => 'text',                   
-                ]),
-
-                new TableField('image', [
-                    'label'     => 'Image',
-                    'component' => 'upload',
-                    'upload'    => true,
-                    
-                ]),
-
-                new TableField('url', [
-                    'label'    => 'URL',
-                    'sortable' => true,
-                    'component'=> 'string',
-                    
-                ]),
-                new TableField('created_at', [
-                    'label'    => 'Created at',
-                    'sortable' => true,
-                ]),
-
-                new TableField('updated_at', [
-                    'label'    => 'Updated at',
-                    'sortable' => true,
-                    
-                ]),
-                
-
-            ],*/
         ]);
-
-
-        //$this->_setup();
     }
-    
-    /*
-    parent::__construct(Model::class, [
-        new Form\Dummy('id, '#', [
-            'sortable' => true,
-        ]),
-        new Form\String('title', 'Title', [
-            'sortable' => true,
-        ]),
-    
-    ]);
 
-    */
-
+    public function verify_data(Request $request) {
+        
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'url' => 'required',
+        ]);
+    }
 }

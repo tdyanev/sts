@@ -10,7 +10,6 @@ class ImageUploadField extends UploadField {
     public function __construct($a, $b, $c) {
 
         parent::__construct($a, $b, array_merge([
-            'extensions' => ['jpg', 'png', 'gif'],
             'width' => 'auto',
             'height' => 'auto',
         ], $c));
@@ -25,16 +24,8 @@ class ImageUploadField extends UploadField {
         //return parent::print($this->config['carbon_method']($date));
     }
 
-    public function validate($file) {
-        return in_array($file->extension(), $this->config['extensions']);
-    }
-
-    public function store($file) {
-        $extension = $file->extension();
-
-        //dd($extension);
-
-        return $file->store($this->config['directory']);
+    public function store($image) {
+        return $image ? $image->store($this->config['directory']) : false;
     }
 
     /*
