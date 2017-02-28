@@ -11,9 +11,6 @@
                 <h2>{{ $project->title }}</h2>
             </div>
 
-            <div class="col-sm-8 col-xs-12">
-                {{ $project->description }}
-            </div>
 
             <div class="col-sm-8 col-xs-12">
                 <img src="{{ asset('storage/' . $project->image) }}" height="100" />
@@ -24,7 +21,7 @@
             </div>
 
             <div class="col-sm-8 col-xs-12">
-                <a href="{{ route('projects.show', ['id' => $project->id]) }}">link</a>
+                <a href="{{ route('projects.show', ['id' => $project->id]) }}-{{ $project->slug }}">link</a>
             </div>
         </div>
         @endforeach 

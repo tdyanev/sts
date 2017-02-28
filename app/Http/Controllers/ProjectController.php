@@ -17,7 +17,7 @@ class ProjectController extends Controller
         $projects = Project::latest()->paginate(config('app.custom.projects_per_page'));
 
 
-        return view('projects', compact('projects'));
+        return view('projects.index', compact('projects'));
     }
 
 
@@ -29,40 +29,14 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        //
+        $parts = explode('-', $id);
+
+
+        return $this->_show(Project::find($parts[0]));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+    private function _show(Project $project) {
+        return view('projects.single', compact('project'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }
