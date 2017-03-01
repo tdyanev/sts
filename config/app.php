@@ -230,4 +230,9 @@ return [
 
     ],
 
+
+    'custom' => [
+        'projects_per_page' => 5,
+
+    ],
 ];

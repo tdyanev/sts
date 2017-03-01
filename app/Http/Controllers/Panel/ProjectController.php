@@ -15,12 +15,19 @@ class ProjectController extends CrudController
 
     public function __construct() {
         parent::__construct(\App\Project::class, [
-            new Form\KeyField('id', '#', [
+            new Form\StringField('id', '#', [
                 'sortable' => true,
+                'editable' => false,
             ]),
 
             new Form\StringField('title', 'Title', [
                 'sortable' => true,
+                //'validation' => 'required|max:255',
+            ]),
+
+            new Form\StringField('slug', 'Slug', [
+                'editable' => false,
+                //'sortable' => true,
                 //'validation' => 'required|max:255',
             ]),
 
@@ -56,5 +63,10 @@ class ProjectController extends CrudController
             'title' => 'required|max:255',
             'url' => 'required',
         ]);
+    }
+
+
+    public function prepare(& $instance) {
+        $instance->slug = str_slug($instance->title, '-');
     }
 }

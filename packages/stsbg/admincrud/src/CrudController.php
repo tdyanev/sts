@@ -20,9 +20,12 @@ class CrudController extends BaseController {
         $this->fields    = $fields;
         
         $this->params    = [
-            'namespace' => $this->config['namespace'],
-            'table'     => with(new $this->model)->getTable(),
+            'namespace'   => $this->config['namespace'] . '::',
+                //. $this->config['routePrefix'],
+            'table'       => with(new $this->model)->getTable(),
+            'routePrefix' => $this->config['routePrefix'],
         ];
+        //dd($this->params);
     }
 
     public function index(Request $request)
@@ -77,6 +80,10 @@ class CrudController extends BaseController {
         //dd($request);
     }
 
+    public function prepare(& $instance) {
+
+    }
+
     public function update($id, Request $request)
     {
     	$instance = $id === 0 ? new $this->model :
@@ -98,8 +105,11 @@ class CrudController extends BaseController {
             }
         }
 
+        $this->prepare($instance);
+
         $instance->save();
 
-        return redirect(route($this->params['table'] . '.index'));
+        return redirect(route($this->params['routePrefix']
+            . $this->params['table'] . '.index'));
     }
 }

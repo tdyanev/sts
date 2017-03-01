@@ -24,8 +24,11 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Project::class, function (Faker\Generator $faker) {
+    $title = $faker->sentence;
+
     return [
-        'title' => $faker->sentence,
+        'title' => $title,
+        'slug' => str_slug($title, '-'),
         'description' => $faker->text,
         'url' => $faker->url,
         'image' => $faker->url,
