@@ -37,21 +37,42 @@ header {
         
         #myNavbar { padding: 0; }
         
-        ul li a {                    
-            color: $link-default-color;
-            font-weight: bold;
-            padding-right: 2*$distance;
+        ul li {
+            padding-right: $distance;
+            padding-left: $distance;
+            
+            a {                    
+                color: $link-default-color;
+                font-weight: bold;
+                padding-right: 0;
+                padding-left: 0;
+            }            
+                      
+            a.active { 
+                border-top: 1px solid $link-default-hover-color;
+                color: $link-default-hover-color;
+                margin-top: -1px;
+            }
+            
+            a:hover {
+                border-top: 2px solid $link-default-hover-color;
+                color: $link-default-hover-color;
+                margin-top: -2px;
+            }
         }
                 
-        a:first-child { padding-left: 0; }                
-        a.active { color: $link-default-hover-color; }
+        ul li:first-child { padding-left: 0; }      
                 
         .icon-bar {
             background: $link-default-hover-color;
         }
         
         @media (max-width: 768px) {
-            #myNavbar { padding: 0 15px; }
+            #myNavbar { 
+                padding: 0 15px;
+                
+                ul li { padding-left: 15px; }
+            }
         }
     }
     
