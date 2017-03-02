@@ -1,5 +1,6 @@
 .services {
-    
+    margin-bottom: $distance;
+
     p {
         text-align: justify;
         text-indent: $distance;
@@ -35,5 +36,12 @@
         a {
             display: block;
         }
+    }
+    
+    .title {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: $distance;
+        margin-top: 2*$distance;
     }
 }
