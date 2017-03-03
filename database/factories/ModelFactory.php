@@ -44,3 +44,13 @@ $factory->define(App\Blog::class, function (Faker\Generator $faker) {
         'updated_at' => $faker->dateTime,
     ];
 });
+
+
+$factory->define(App\Page::class, function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->sentence,
+        'text' => $faker->text,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+    ];
+});

@@ -46,5 +46,7 @@ Route::group([
 	Route::get('/home', 'Panel\HomeController@index')->name('home');
 	Route::resource('projects', 'Panel\ProjectController');
 	Route::resource('blogs', 'Panel\BlogController');
+	Route::resource('pages', 'Panel\PageController');
+
 });
 
