@@ -1,5 +1,5 @@
 header {
-    border-top: 7px solid $gray;
+    border-top: 7px solid $gray-custom;
     margin-bottom: $distance;
     
     .wide-header {
@@ -32,7 +32,7 @@ header {
     }
     
     .top-menu {
-        background: $gray;
+        background: $gray-custom;
         margin: 0;
         
         #myNavbar { padding: 0; }
