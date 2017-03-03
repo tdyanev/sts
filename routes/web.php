@@ -12,6 +12,10 @@
 */
 
 Route::get('/', 'HomeController@index');
+
+
+/*
+
 Route::get('/team', function(){
     return view('team');
 });
@@ -29,6 +33,11 @@ Route::get('/contacts', function(){
     return view('contacts');
 });
 
+*/
+
+foreach (config('app.custom.pages') as $page) {
+	Route::get('/' . $page, 'PageController@show');
+}
 
 Route::resource('projects', 'ProjectController', [
 	'only' => [ 'index', 'show']

@@ -233,6 +233,7 @@ return [
 
     'custom' => [
         'projects_per_page' => 5,
+        'pages' => ['seo', 'design', 'contact'],
 
     ],
 ];
