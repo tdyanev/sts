@@ -118,7 +118,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="google" href="#" title="Google+">
+                            <a class="google" href="https://plus.google.com/communities/112274025237702604880" title="Google+">
                                 <i class="fa fa-google-plus"></i>
                             </a>
                         </li>
@@ -128,7 +128,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="/contacts" title="Contact us" class="btn" type="button">Contact us</a>
+                    <a href="/contacts" title="Contact us" class="btn btn-custom" type="button">Contact us</a>
                 </div>
                 <div class="col-sm-4 col-xs-12 contacts text-right h-card">
                     <h3>Contacts</h3>
@@ -149,6 +149,5 @@
   
     <!-- Scripts -->
     <script src="/js/app.js"></script>
-    
 </body>
 </html>

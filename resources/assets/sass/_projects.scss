@@ -1,0 +1,15 @@
+.projects {    
+    img { margin-bottom: 2*$distance; }
+    
+    .hovereffect:hover {
+	   cursor: pointer;
+    }
+}
+
+.project {
+    h2 { margin: 0; }
+    
+    p { margin: $distance 0; }
+    
+    img { margin-bottom: 3*$distance; }
+}

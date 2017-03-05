@@ -1,0 +1,17 @@
+.contacts {
+    textarea { resize: none; }
+    
+    #message { margin-bottom: $distance+10; }
+
+    .btn-custom {
+        background: $link-default-hover-color;
+        border: none;
+        border-radius: 6px;
+        margin-top: 0;
+    }
+}
+    
+.map.container-fluid {
+    margin-top: 2*$distance;
+    padding: 0;
+}
