@@ -177,6 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
 
         Stsbg\AdminCrud\AdminCrudServiceProvider::class,
     ],
@@ -228,11 +229,18 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+
+
+        'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class
+
     ],
 
 
     'custom' => [
         'projects_per_page' => 5,
+        'pages' => [
+            'seo', 'design', 'web'
+        ]
 
     ],
 ];

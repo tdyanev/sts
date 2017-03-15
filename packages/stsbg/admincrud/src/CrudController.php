@@ -39,7 +39,9 @@ class CrudController extends BaseController {
         return $this->_view('index', [
             'order'   => $order,
             'type'    => $type,
-            'fields'  => $this->fields,
+            'fields'  => array_filter($this->fields, function($e) {
+                return $e->display_in_table();
+            }),
             'data'    => $data,
         ]);
     }

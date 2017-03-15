@@ -34,6 +34,7 @@
     @if ($field->editable())
       @component($namespace . 'form.' . $field->view(), $field->params())
       	{{ $data[$field->name] }}
+
       @endcomponent
 
     @endif

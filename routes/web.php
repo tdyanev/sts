@@ -11,40 +11,55 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('/team', function(){
-    return view('team');
-});
-Route::get('/seo', function(){
-    return view('seo');
-});
-Route::get('/web-development', function(){
-    return view('web-development');
-});
-Route::get('/design', function(){
-    return view('design');
-});
-
-Route::get('/contacts', function(){
-    return view('contacts');
-});
+function create_pages() {
+    foreach (config('app.custom.pages') as $page) {
+        Route::get('/' . $page, 'PageController@show');
+    }
+}
 
 
-Route::resource('projects', 'ProjectController', [
-	'only' => [ 'index', 'show']
-]);
+Route::group([
+	'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect'],
+], function() {
+
+	Route::get('/', 'HomeController@index');
+	Route::resource('projects', 'ProjectController', [
+		'only' => [ 'index', 'show']
+	]);
+
+    create_pages();
+
+
+    Route::get('/team', function(){
+    	return view('team');
+	});
+
+
+
+	Route::get('/contacts', function(){
+	    return view('contacts');
+	});
+
+});
+
 
 
 Route::group([
 	'prefix' => 'panel',
 	'as' => 'panel.',
-	//'namespace' => 'Panel',
+	'namespace' => 'Panel',
 	//'middleware' => 'auth',
-], function() {
-	Auth::routes();
-
-	Route::get('/home', 'Panel\HomeController@index')->name('home');
-	Route::resource('projects', 'Panel\ProjectController');
-	Route::resource('blogs', 'Panel\BlogController');
+], function() {	
+	Route::get('/home', 'HomeController@index')->name('home');
+	Route::resource('projects', 'ProjectController');
+	Route::resource('blogs', 'BlogController');
+	Route::resource('pages', 'PageController');
+	Route::resource('locales', 'LocaleController');
 });
 
+Route::group([
+	'prefix' => 'panel',
+], function() {
+	Auth::routes();
+});
