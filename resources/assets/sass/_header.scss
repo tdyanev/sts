@@ -8,9 +8,9 @@ header {
         height: 108px;
 
         .logo img {
-            height: 80px;
-            margin-top: 10px;
-            width: 135px;
+            height: 50px;
+            margin-top: 40px;
+            width: 200px;
         }
         
         .contact div {
@@ -101,7 +101,7 @@ header {
     }
     
     .header-color {
-        background: #20358c;
+        background: $link-default-hover-color;
         height: 90px;
         margin-bottom: 2*$distance;
         
