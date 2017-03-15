@@ -5,13 +5,13 @@
     
     .box {
         background: #fff;
+        //box-shadow: 0 0 40px #888888;
         border: 1px solid $link-default-hover-color;
-        box-shadow: 0 0 40px #888888;
         min-height: 270px;
         padding: $distance;
         position: relative;
         text-align: center;
-        
+        transition: box-shadow 0.5s;
         
         .box-bottom {
             background: $link-default-hover-color;
@@ -31,8 +31,8 @@
     }
     
     .box:hover {
-        box-shadow: none;
-        //box-shadow: 10px 10px 5px #888888;
+        //box-shadow: none;
+        box-shadow: 10px 10px 5px #888888;
     }
     
     @media (max-width: 1199px) {

@@ -30,7 +30,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-6 logo">
-                        <a href="/" title="Home"><img src="/images/logo.png" alt="logo" /></a>
+                        <a href="/" title="Home"><img src="/images/logo9.png" alt="logo" /></a>
                     </div>
                     <div class="col-xs-6 contact">
                         <div class="pull-right">Contact us on<br />+359 883 472 597</div>
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </nav>
-        <!--
+        
         <div class="header-image container-fluid">
             <div class="blurred">
                 <h1>We are here for you!</h1>
@@ -72,7 +72,8 @@
                 </svg>
             </div>
         </div>
-        -->
+        
+        <!--
         <div class="header-color container-fluid">
             <div class="container">
                 <div class="blurred">
@@ -80,11 +81,11 @@
                     <!--
                     <div class="moving-ball"></div>
                     <div class="moving-ball2"></div>
-                    -->
+                    --><!--
                 </div>
             </div>
         </div>
-        
+        -->
     </header>
     
     @show
@@ -118,7 +119,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="google" href="#" title="Google+">
+                            <a class="google" href="https://plus.google.com/communities/112274025237702604880" title="Google+">
                                 <i class="fa fa-google-plus"></i>
                             </a>
                         </li>
@@ -128,7 +129,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="/contacts" title="Contact us" class="btn" type="button">Contact us</a>
+                    <a href="/contacts" title="Contact us" class="btn btn-custom" type="button">Contact us</a>
                 </div>
                 <div class="col-sm-4 col-xs-12 contacts text-right h-card">
                     <h3>Contacts</h3>
@@ -149,6 +150,5 @@
   
     <!-- Scripts -->
     <script src="/js/app.js"></script>
-    
 </body>
 </html>

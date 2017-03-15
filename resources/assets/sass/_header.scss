@@ -1,5 +1,5 @@
 header {
-    border-top: 7px solid $gray;
+    border-top: 7px solid $gray-custom;
     margin-bottom: $distance;
     
     .wide-header {
@@ -8,9 +8,9 @@ header {
         height: 108px;
 
         .logo img {
-            height: 80px;
-            margin-top: 10px;
-            width: 135px;
+            height: 50px;
+            margin-top: 40px;
+            width: 200px;
         }
         
         .contact div {
@@ -32,7 +32,7 @@ header {
     }
     
     .top-menu {
-        background: $gray;
+        background: $gray-custom;
         margin: 0;
         
         #myNavbar { padding: 0; }
@@ -43,10 +43,32 @@ header {
             
             a {                    
                 color: $link-default-color;
+                display: inline-block;
                 font-weight: bold;
                 padding-right: 0;
                 padding-left: 0;
-            }            
+                
+                //border-top: 2px solid transparent;    
+                //width: 0px;
+                //transition: 0.5s ease;
+                //white-space: nowrap;
+            }
+            
+            a:before {
+                background: transparent;
+                content: '';
+                display: block;
+                height: 2px;
+                position: absolute;
+                top: 0;
+                transition: width .5s ease, background-color .5s ease;
+                width: 0;
+            }
+            
+            a:hover:before {
+                width: 100%;
+                background: $link-default-hover-color;
+            }
                       
             a.active { 
                 border-top: 1px solid $link-default-hover-color;
@@ -54,11 +76,13 @@ header {
                 margin-top: -1px;
             }
             
+            /*
             a:hover {
                 border-top: 2px solid $link-default-hover-color;
                 color: $link-default-hover-color;
                 margin-top: -2px;
             }
+            */
         }
                 
         ul li:first-child { padding-left: 0; }      
@@ -77,7 +101,7 @@ header {
     }
     
     .header-color {
-        background: #20358c;
+        background: $link-default-hover-color;
         height: 90px;
         margin-bottom: 2*$distance;
         
@@ -180,4 +204,22 @@ header {
             display: none;
         }
     }
+}
+
+.container .btn-custom {
+        background-color: $link-default-hover-color;   //$light-color;
+        border-radius: 10px;
+        border: 2px solid $body-bg;
+        color: #fff;
+        display: block;
+        font-weight: bold;
+        margin: 0 auto;
+        margin-top: 2*$distance+10;
+        text-transform: uppercase;
+        width: 150px;
+    }
+    
+.container .btn-custom:hover, .container .btn-custom:active, .container .btn-custom:focus {
+    background-color: $link-default-hover-color;
+    color: #fff;
 }
