@@ -38,6 +38,9 @@
                 </div>
             </div>
         </div>
+
+        @component('locale') @endcomponent
+
         <nav class="navbar top-menu">
             <div class="container-fluid">
                 <div class="container">
@@ -50,13 +53,13 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="/" title="Home">Home</a></li>
-                            <li><a href="/web-development" title="Web Development">Web Development</a></li>
-                            <li><a href="/design" title="Design">Design</a></li>
-                            <li><a href="/seo">SEO</a></li>
-                            <li><a href="/team" title="Team">Team</a></li>
-                            <li><a href="/projects" title="Projects">Projects</a></li>
-                            <li><a href="/contacts" title="Contacts">Contacts</a></li>
+                            <li class="active"><a href="/{{ App::getlocale() }}" title="@lang('nav.home')">@lang('nav.home')</a></li>
+                            <li><a href="/{{ App::getlocale() }}/web" title="Web Development">@lang('nav.dev')</a></li>
+                            <li><a href="/{{ App::getlocale() }}/design" title="Design">Design</a></li>
+                            <li><a href="/{{ App::getlocale() }}/seo">SEO</a></li>
+                            <li><a href="/{{ App::getlocale() }}/team" title="Team">Team</a></li>
+                            <li><a href="/{{ App::getlocale() }}/projects" title="Projects">Projects</a></li>
+                            <li><a href="/{{ App::getlocale() }}/contacts" title="Contacts">Contacts</a></li>
                         </ul>
                     </div>
                 </div>
@@ -76,7 +79,7 @@
         <div class="header-color container-fluid">
             <div class="container">
                 <div class="blurred">
-                    <h1>page title</h1>
+                    <h1>@yield('title')</h1>
                     <!--
                     <div class="moving-ball"></div>
                     <div class="moving-ball2"></div>

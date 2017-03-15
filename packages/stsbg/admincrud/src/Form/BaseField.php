@@ -7,7 +7,9 @@ abstract class BaseField {
     private $defaults = [
         'sortable' => false,
         'editable' => true,
+        'display_in_table' => true,
         'view'     => '',
+
     ];
 
     public $name, $label;
@@ -23,6 +25,7 @@ abstract class BaseField {
         $this->config = array_merge($this->defaults, $config, [
             'name'  => $name,
             'label' => $label,
+            //'print' => $this->print,
         ]);
     }
 
@@ -41,6 +44,10 @@ abstract class BaseField {
     public function view() {
         return $this->config['view'];
         //return $this->config['view'];
+    }
+
+    public function display_in_table() {
+        return $this->config['display_in_table'];
     }
 
     public function params() {

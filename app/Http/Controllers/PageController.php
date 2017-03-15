@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Project;
+use App\Page;
 
-class ProjectController extends Controller
+class PageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,17 +27,11 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //dd([$lang, $id]);
-        $parts = explode('-', $id);
+        $data = Page::where('title', $request->segment(2))->first();
 
+        return view('pages.single', compact('data'));
 
-        return $this->_show(Project::find($parts[0]));
     }
-
-    private function _show(Project $project) {
-        return view('projects.single', compact('project'));
-    }
-
 }

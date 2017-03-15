@@ -7,7 +7,7 @@
         <div class="row">
     	@foreach ($projects as $project)
             <div class="col-sm-6 col-xs-12">
-                <a href="{{ route('projects.show', ['id' => $project->id]) }}-{{ $project->slug }}">
+                <a href="projects/{{ $project->id }}-{{ $project->slug }}">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="hovereffect">

@@ -29,6 +29,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        //$this->app->bind('localeLinkHelper', function() {
+        //    return new \App\Helpers\DateHelper;
+        //});
     }
 }

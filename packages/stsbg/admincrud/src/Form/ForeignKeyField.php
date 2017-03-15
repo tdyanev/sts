@@ -4,12 +4,19 @@ namespace Stsbg\AdminCrud\Form;
 
 //use Illuminate\Support\Facades\View;
 
-class KeyField extends BaseField {
+class ForeignKeyField extends BaseField {
 
     public function __construct($a, $b, $c) {
         parent::__construct($a, $b, array_merge([
-            'editable' => false,
+            //'editable' => true,
+            'view'     => 'select',
         ], $c));
+
+
+    }
+
+    public function print($value) {
+        return parent::print($value->{$this->config['prop']});
     }
 
     /*
