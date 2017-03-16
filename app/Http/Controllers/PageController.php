@@ -29,7 +29,7 @@ class PageController extends Controller
      */
     public function show(Request $request)
     {
-        $data = Page::where('title', $request->segment(2))->first();
+        $data = Page::where('title', $request->segment(2))->first() ?? new Page;
 
         return view('pages.single', compact('data'));
 
