@@ -30,7 +30,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-6 logo">
-                        <a href="/" title="Home"><img src="/images/logo9.png" alt="logo" /></a>
+                        <a href="/" title="Home"><img src="/images/logoo.png" alt="logo" /></a>
                     </div>
                     <div class="col-xs-6 contact">
                         <div class="pull-right">Contact us on<br />+359 883 472 597</div>
