@@ -49,7 +49,7 @@ Route::group([
 	'prefix' => 'panel',
 	'as' => 'panel.',
 	'namespace' => 'Panel',
-	//'middleware' => 'auth',
+	'middleware' => 'auth',
 ], function() {	
 	Route::get('/home', 'HomeController@index')->name('home');
 	Route::resource('projects', 'ProjectController');

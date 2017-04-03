@@ -27,8 +27,10 @@
             <div id="nav" class="col-md-2">
                 @section('header')
                     <div class="list-group">
-                       <a href="{{ route('panel.home') }}" class="list-group-item">Home</a>
-                       <a href="{{ route('projects.index') }}" class="list-group-item">Projects</a>
+                       <a href="home" class="list-group-item">Home</a>
+                       <a href="projects" class="list-group-item">Projects</a>
+                       <a href="blogs" class="list-group-item">Blogs</a>
+                       <a href="pages" class="list-group-item">Pages</a>
                     </div>
                 @show
             </div>

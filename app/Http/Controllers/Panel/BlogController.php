@@ -12,8 +12,9 @@ class BlogController extends CrudController
    
     public function __construct() {
         parent::__construct(\App\Blog::class, [
-            new Form\ForeignKeyField('id', '#', [
+            new Form\StringField('id', '#', [
                 'sortable' => true,
+                'editable' => false,
             ]),
 
             new Form\StringField('title', 'Title', [
