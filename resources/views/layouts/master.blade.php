@@ -66,6 +66,7 @@
             </div>
         </nav>
         
+        @if (Request::segment(2) == '')
         <div class="header-image container-fluid">
             <div class="blurred">
                 <h1>We are here for you!</h1>
@@ -75,8 +76,8 @@
                 </svg>
             </div>
         </div>
-        
-        <!--
+        @else
+
         <div class="header-color container-fluid">
             <div class="container">
                 <div class="blurred">
@@ -84,11 +85,12 @@
                     <!--
                     <div class="moving-ball"></div>
                     <div class="moving-ball2"></div>
-                    --><!--
+                    -->
                 </div>
             </div>
         </div>
-        -->
+        @endif
+
     </header>
     
     @show

@@ -29,7 +29,13 @@ class PageController extends Controller
      */
     public function show(Request $request)
     {
-        $data = Page::where('title', $request->segment(2))->first() ?? new Page;
+        $locale_id = config('app.custom.locales')[\App::getLocale()];
+        // \App::getLocale());
+
+        $data = Page::where([
+            'title' => $request->segment(2),
+            'locale_id' => $locale_id,
+        ])->first() ?? new Page;
 
         return view('pages.single', compact('data'));
 

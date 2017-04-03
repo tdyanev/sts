@@ -240,7 +240,11 @@ return [
         'projects_per_page' => 5,
         'pages' => [
             'seo', 'design', 'web'
-        ]
+        ],
+        'locales' => [
+            'en' => 1,
+            'bg' => 2,
+        ],
 
     ],
 ];
