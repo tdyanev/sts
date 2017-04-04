@@ -27,9 +27,22 @@
             <div id="nav" class="col-md-2">
                 @section('header')
                     <div class="list-group">
-                       <!-- <a href="{{ route('panel.home') }}" class="list-group-item">Home</a>
-                       <a href="{{ route('projects.index') }}" class="list-group-item">Projects</a>
-                       -->
+                       <a href="home" class="list-group-item">Home</a>
+                       <a href="{{ route('panel.projects.index') }}" class="list-group-item">Projects</a>
+                       <a href="{{ route('panel.blogs.index') }}" class="list-group-item">Blogs</a>
+                       <a href="{{ route('panel.pages.index') }}" class="list-group-item">Pages</a>
+
+
+
+                                                               <a class="list-group-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
                     </div>
                 @show
             </div>
@@ -41,6 +54,6 @@
 
    
     <!-- Scripts -->
-    <!-- <script src="/js/panel.app.js"></script> -->
+    <script src="/js/panel.app.js"></script>
 </body>
 </html>

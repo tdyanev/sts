@@ -69,7 +69,7 @@
             <h2>Latest projects:</h2>
             <div class="row">
                 <div class="col-sm-8">
-                    <h3><strong>International Business & Consultation</strong></h3>
+                    <h3><strong>International Business &amp; Consultation</strong></h3>
                     <p>
                         <?php
                         $text = "Company web site for business consultations and administration.Company web site for business consultations and administration.Company web site for business consultations and administration.<br/><br/> Technologies used: Wordpress. Installed
