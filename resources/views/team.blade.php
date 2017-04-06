@@ -9,8 +9,8 @@
                 <div class="hovereffect">
                     <img src="/images/silvena.jpg" class="img img-thumbnail img-responsive" />
                     <div class="overlay">
-                        <h2><strong>Silvena Miteva</strong></h2>
-                        <h3 class="info">Front-end Developer<br/> SEO expert</h3>
+                        <h2><strong>@lang('team.sisi')</strong></h2>
+                        <h3 class="info">@lang('team.front')<br/>@lang('team.seo')</h3>
                     </div>
                 </div>
             </div>
@@ -18,8 +18,8 @@
                 <div class="hovereffect">
                     <img src="/images/tihomir.jpg" class="img img-thumbnail img-responsive" />
                     <div class="overlay">
-                        <h2><strong>Tihomir Yanev</strong></h2>
-                        <h3 class="info">Back-end Developer</h3>
+                        <h2><strong>@lang('team.tisho')</strong></h2>
+                        <h3 class="info">@lang('team.back')</h3>
                     </div>
                 </div>
             </div>
@@ -27,8 +27,8 @@
                 <div class="hovereffect">
                     <img src="/images/desislava.jpg" class="img img-thumbnail img-responsive" />
                     <div class="overlay">
-                        <h2><strong>Desislava Yaneva</strong></h2>
-                        <h3 class="info">Designer</h3>
+                        <h2><strong>@lang('team.desi')</strong></h2>
+                        <h3 class="info">@lang('team.design')</h3>
                     </div>
                 </div>
             </div>

@@ -12,26 +12,26 @@
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="name">
-                                Name
+                                @lang('contacts.name')
                             </label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                            <input type="text" class="form-control" id="name" placeholder="@lang('contacts.pl-name')" required="required" />
                         </div>
                         <div class="form-group">
                             <label for="email">
-                                Email Address
+                                @lang('contacts.email')
                             </label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-envelope"></span>
                                 </span>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" />
+                                <input type="email" class="form-control" id="email" placeholder="@lang('contacts.pl-email')" required="required" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="subject">
-                                Subject
+                                @lang('contacts.subject')
                             </label>                            
-                            <input type="text" class="form-control" id="name" placeholder="Enter subject" required="required" />
+                            <input type="text" class="form-control" id="name" placeholder="@lang('contacts.pl-subject')" required="required" />
                         </div>
                     </div>
                     <div class="col-sm-2"></div>
@@ -41,10 +41,10 @@
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="name">
-                                Message
+                                @lang('contacts.message')
                             </label>
                             <textarea name="message" id="message" class="form-control" 
-                                      rows="9" cols="25" required="required" placeholder="Message">
+                                      rows="9" cols="25" required="required" placeholder="@lang('contacts.pl-message')">
                             </textarea>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <button type="submit" class="btn btn-primary btn-custom" id="btnContactUs">
-                            Send Message
+                            @lang('contacts.send')
                         </button>
                     </div>
                 </div>

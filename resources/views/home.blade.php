@@ -8,29 +8,26 @@
                 <div class="col-sm-4 col-xs-12">
                     <div class="box">
                         <i class="fa fa-line-chart fa-3x" aria-hidden="true"></i>
-                        <h2>SEO and Local SEO</h2>
-                        <p>We optimize your web site or local business. You pay only after you see results!</p>
-                        <a href="" title="" class="box-bottom">Learn more</a>
+                        <h2>@lang('home.seo')</h2>
+                        <p>@lang('home.seo-text')</p>
+                        <a href="/{{ App::getlocale() }}/design" title="" class="box-bottom">@lang('home.more')</a>
                     </div>
                 </div>
                 <div class="col-sm-4 col-xs-12">
                     <div class="box">
                         <i class="fa fa-desktop fa-3x" aria-hidden="true"></i>
                         <i class="fa fa-mobile fa-3x" aria-hidden="true"></i>
-                        <h2>Web Development</h2>
-                        <p>We create company web sites, e-shops and everything you want!</p>
-                        <a href="" title="" class="box-bottom">Learn more</a>
+                        <h2>@lang('home.web')</h2>
+                        <p>@lang('home.web-text')</p>
+                        <a href="/{{ App::getlocale() }}/web" title="" class="box-bottom">@lang('home.more')</a>
                     </div>
                 </div>
                 <div class="col-sm-4 col-xs-12">
                     <div class="box">
-                        <!--
-                        <i class="fa fa-paint-brush" aria-hidden="true"></i>
-                        -->
                         <i class="fa fa-cubes fa-3x" aria-hidden="true"></i>
-                        <h2>Graphic Design</h2>
-                        <p>We design web sites, business cards and logos.</p>
-                        <a href="" title="" class="box-bottom">Learn more</a>
+                        <h2>@lang('home.design')</h2>
+                        <p>@lang('home.design-text')</p>
+                        <a href="/{{ App::getlocale() }}/seo" title="" class="box-bottom">@lang('home.more')</a>
                     </div>
                 </div>
             </div>
@@ -41,7 +38,7 @@
 <section>
     <article class="article-sumed">
         <div class="container">
-            <h2>Latest news:</h2>
+            <h2>@lang('home.news')</h2>
             <div class="row">
                 <div class="col-sm-4">
                     <img src="/images/fuck yeah.png" alt="article-image" />
@@ -59,14 +56,14 @@
                         }
                         ?>
                     </p>
-                    <a href="#" title="" class="read-more pull-right">Read more</a>
+                    <a href="#" title="" class="read-more pull-right">@lang('home.read')</a>
                 </div>
             </div>
         </div>
     </article>
     <article class="article-sumed">
         <div class="container latest-projects">
-            <h2>Latest projects:</h2>
+            <h2>@lang('home.projects')</h2>
             <div class="row">
                 <div class="col-sm-8">
                     <h3><strong>International Business &amp; Consultation</strong></h3>
@@ -81,7 +78,7 @@
                         }
                     ?>  
                     </p>
-                    <a href="#" title="" class="read-more pull-left">Visit site</a>
+                    <a href="#" title="" class="read-more pull-left">@lang('home.read')</a>
                 </div>
                 <div class="col-sm-4">
                     <img src="/images/ibc.png" alt="article-image" />

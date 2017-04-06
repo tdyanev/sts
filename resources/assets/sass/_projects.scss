@@ -1,5 +1,9 @@
 .projects {    
-    img { margin-bottom: 2*$distance; }
+    img { 
+        border: 4px solid $link-default-hover-color;
+        border-style: double;
+        margin-bottom: 2*$distance;
+    }
     
     .hovereffect:hover {
 	   cursor: pointer;
