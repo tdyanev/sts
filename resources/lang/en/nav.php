@@ -13,12 +13,12 @@ return [
     |
     */
 
-    'home' => 'Начало',
-    'dev' => 'Разработка на сайтове',
-    'design' => 'Дизайн',
-    'seo' => 'Оптимизация',
-    'team' => 'Екип',
-    'projects' => 'Проекти',
-    'contacts' => 'Контакти',
-    'home-title' => 'Ние сме тук за вас!'
+    'home' => 'Home',
+    'dev' => 'Web Development',
+    'design' => 'Design',
+    'seo' => 'SEO',
+    'team' => 'Team',
+    'projects' => 'Projects',
+    'contacts' => 'Contacts',
+    'home-title' => 'We are here for you!'
 ];

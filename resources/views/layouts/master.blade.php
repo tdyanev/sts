@@ -29,17 +29,24 @@
         <div class="wide-header container-fluid">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-6 logo">
-                        <a href="/" title="Home"><img src="/images/logoo.png" alt="logo" /></a>
+                    <div class="col-xs-12 col-sm-6 logo">
+                        <a href="/" title="Home">
+                            <img src="/images/logo.png" alt="logo" />
+                        </a>
                     </div>
-                    <div class="col-xs-6 contact">
-                        <div class="pull-right">Contact us on<br />+359 883 472 597</div>
+                    <div class="col-xs-12 col-sm-6 contact">
+                        <div class="pull-right text-center"> 
+                            <span class="locale">@component('locale') @endcomponent </span>
+                            <br/> 
+                            <span class="first-color">Contact us on</span>
+                            <br />
+                            <span class="second-color"><a href="tel:+359883472597">+359 883 472 597</a></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        @component('locale') @endcomponent
 
         <nav class="navbar top-menu">
             <div class="container-fluid">
@@ -48,18 +55,18 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>                        
+                            <span class="icon-bar"></span>
                         </button>
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="/{{ App::getlocale() }}" title="@lang('nav.home')">@lang('nav.home')</a></li>
                             <li><a href="/{{ App::getlocale() }}/web" title="Web Development">@lang('nav.dev')</a></li>
-                            <li><a href="/{{ App::getlocale() }}/design" title="Design">Design</a></li>
-                            <li><a href="/{{ App::getlocale() }}/seo">SEO</a></li>
-                            <li><a href="/{{ App::getlocale() }}/team" title="Team">Team</a></li>
-                            <li><a href="/{{ App::getlocale() }}/projects" title="Projects">Projects</a></li>
-                            <li><a href="/{{ App::getlocale() }}/contacts" title="Contacts">Contacts</a></li>
+                            <li><a href="/{{ App::getlocale() }}/design" title="Design">@lang('nav.design')</a></li>
+                            <li><a href="/{{ App::getlocale() }}/seo">@lang('nav.seo')</a></li>
+                            <li><a href="/{{ App::getlocale() }}/team" title="Team">@lang('nav.team')</a></li>
+                            <li><a href="/{{ App::getlocale() }}/projects" title="Projects">@lang('nav.projects')</a></li>
+                            <li><a href="/{{ App::getlocale() }}/contacts" title="Contacts">@lang('nav.contacts')</a></li>
                         </ul>
                     </div>
                 </div>
@@ -68,7 +75,7 @@
         
         <div class="header-image container-fluid">
             <div class="blurred">
-                <h1>We are here for you!</h1>
+                <h1>@lang('nav.home-title')</h1>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon class="svg--sm" fill="#fff" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
                     <polygon class="svg--lg" fill="#fff" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
@@ -101,7 +108,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 col-xs-12 services">
-                    <h3>Services</h3>
+                    <h3>@lang('footer.services')</h3>
                     <ul>
                         <li>
                             <a href="/web-development" title="Web Development">Web Site Development</a>
@@ -132,13 +139,13 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="/contacts" title="Contact us" class="btn btn-custom" type="button">Contact us</a>
+                    <a href="/contacts" title="Contact us" class="btn btn-custom" type="button">@lang('footer.contact-us')</a>
                 </div>
                 <div class="col-sm-4 col-xs-12 contacts text-right h-card">
-                    <h3>Contacts</h3>
+                    <h3>@lang('footer.contacts')</h3>
                     <ul>
-                        <li><span class="p-locality">Sofia</span>, <span class="p-country-name">Bulgaria</span></li>
-                        <li><span class="p-street-address">zh.k. Strelbishte, bl. 88</span></li>
+                        <li><span class="p-locality">@lang('footer.city')</span>, <span class="p-country-name">@lang('footer.country')</span></li>
+                        <li><span class="p-street-address">@lang('footer.address')</span></li>
                         <li><span class="p-tel">+359 883 472 597</span></li>
                         <li><span class="u-email">office@sts2017.com</span></li>
                     </ul>
@@ -146,7 +153,7 @@
             </div>
         </div>
         <div class="footer-copyright">
-            <p>&#169; STS 2017. All rights reserved.</p>
+            <p>&#169; STS 2017. @lang('footer.copyright')</p>
         </div>
     </footer>
     @show
