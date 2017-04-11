@@ -1,11 +1,12 @@
 <?php
 
 return [
+    'team' => 'Team',
     'sisi' => 'Silvena Miteva',
     'front' => 'Front-End developer',
     'seo' => 'Optimiser',
-    'tisho' => 'Тихомир Янев',
+    'tisho' => 'Tihomir Yanev',
     'back' => 'Back-End developer',
-    'desi' => 'Десислава Янева',
+    'desi' => 'Desislava Yaneva',
     'design' => 'Designer',
 ];
