@@ -5,8 +5,16 @@
         margin-bottom: 2*$distance;
     }
     
-    .hovereffect:hover {
-	   cursor: pointer;
+    /*
+    .hovereffect:hover { cursor: pointer; }
+    */
+    
+    .info {
+        font-size: 18px;
+    }
+    
+    h2 {
+        font-size: 20px;
     }
 }
 
@@ -15,5 +23,9 @@
     
     p { margin: $distance 0; }
     
-    img { margin-bottom: 3*$distance; }
+    img {
+        border: 4px solid $link-default-hover-color;
+        border-style: double;
+        margin-bottom: 3*$distance; 
+    }
 }

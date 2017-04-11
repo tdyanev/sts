@@ -5,7 +5,7 @@ header {
     .wide-header {
         border-bottom: 2px solid $laravel-border-color;
         border-top: 2px solid $laravel-border-color;
-        height: 123px;
+        min-height: 125px;
 
         .logo img {
             height: 45px;
@@ -59,14 +59,18 @@ header {
             }
         }
         
-        @media (max-width: 399px) {
-            .contact div {
-                font-size: 12px;
+        @media (max-width: 768px) {
+            .logo {
+                text-align: center; 
             }
             
-            .logo img {
-                width: 100px;
-                height: 60px;
+            .contact > div {
+                float: none !important;
+            }
+            
+            .locale ul { 
+                float: none;
+                text-align: center;
             }
         }
     }

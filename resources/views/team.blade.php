@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', __('team.team'))
+
 @section('content')
 
 <section>
