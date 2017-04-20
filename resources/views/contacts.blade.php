@@ -6,7 +6,8 @@
     <div class="container contacts">
         <div class="row">
             <div class="col-sm-12 col-xs-12">
-                <form>
+                <form method="POST" action="contacts/send">
+                {{ csrf_field() }}
                 <div class="row">
                     <div class="col-sm-2"></div>
                     <div class="col-sm-8">
@@ -14,7 +15,7 @@
                             <label for="name">
                                 @lang('contacts.name')
                             </label>
-                            <input type="text" class="form-control" id="name" placeholder="@lang('contacts.pl-name')" required="required" />
+                            <input name="name" type="text" class="form-control" id="name" placeholder="@lang('contacts.pl-name')" required="required" />
                         </div>
                         <div class="form-group">
                             <label for="email">
@@ -24,14 +25,14 @@
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-envelope"></span>
                                 </span>
-                                <input type="email" class="form-control" id="email" placeholder="@lang('contacts.pl-email')" required="required" />
+                                <input type="email" name="email" class="form-control" id="email" placeholder="@lang('contacts.pl-email')" required="required" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="subject">
                                 @lang('contacts.subject')
                             </label>                            
-                            <input type="text" class="form-control" id="name" placeholder="@lang('contacts.pl-subject')" required="required" />
+                            <input type="text" name="subject" class="form-control" id="name" placeholder="@lang('contacts.pl-subject')" required="required" />
                         </div>
                     </div>
                     <div class="col-sm-2"></div>

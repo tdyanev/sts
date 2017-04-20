@@ -13,6 +13,8 @@ $.ajaxSetup({
 	}
 });
 
+
+
 $('.delete').on('click', function() {
 	var $row = $(this).closest('tr');
 	//console.log($row);

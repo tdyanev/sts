@@ -11,11 +11,6 @@
 |
 */
 
-function create_pages() {
-    foreach (config('app.custom.pages') as $page) {
-        Route::get('/' . $page, 'PageController@show');
-    }
-}
 
 
 Route::group([
@@ -28,7 +23,9 @@ Route::group([
 		'only' => [ 'index', 'show']
 	]);
 
-    create_pages();
+    foreach (config('app.custom.pages') as $page) {
+        Route::get('/' . $page, 'PageController@show');
+    }
 
 
     Route::get('/team', function(){
@@ -40,6 +37,8 @@ Route::group([
 	Route::get('/contacts', function(){
 	    return view('contacts');
 	});
+
+	Route::post('/contacts/send', 'HomeController@contacts_send');
 
 });
 

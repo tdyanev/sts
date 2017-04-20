@@ -180,6 +180,10 @@ return [
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
 
         Stsbg\AdminCrud\AdminCrudServiceProvider::class,
+
+
+
+        Unisharp\Ckeditor\ServiceProvider::class,
     ],
 
     /*

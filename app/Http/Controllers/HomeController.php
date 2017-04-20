@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\ContactSend;
 
 class HomeController extends Controller
 {
@@ -25,5 +26,13 @@ class HomeController extends Controller
     {
 
         return view('home');
+    }
+
+    public function contacts_send(Request $request) {
+        \Mail::to('tdyanev@gmail.com')->send(new ContactSend([
+            'name' => $request->name,
+        ]));
+
+        return back();
     }
 }

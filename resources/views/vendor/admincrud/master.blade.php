@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet" />
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -54,6 +55,38 @@
 
    
     <!-- Scripts -->
-    <script src="/js/panel.app.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script> 
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js"></script>
+
+  <script>
+    $(document).ready(function() {
+        $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': window.Laravel.csrfToken,
+    }
+});
+
+
+
+$('.delete').on('click', function() {
+    var $row = $(this).closest('tr');
+    //console.log($row);
+
+    $.post({
+        type: 'delete',
+        url: this.href,
+    }).done(function (data) {
+        //alert('success');
+        $row.fadeOut();
+        //console.log($row, data);
+    });
+
+    return false;
+});
+        $('textarea').summernote();
+    });
+  </script>
+
 </body>
 </html>
