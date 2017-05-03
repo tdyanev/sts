@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 logo">
                         <a href="/" title="Home">
-                            <img src="/images/logo.png" alt="logo" />
+                            <img src="/images/logo.svg" alt="logo" />
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 contact">

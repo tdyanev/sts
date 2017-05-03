@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', __('contacts.title'))
+
 @section('content')
 
 <section>
@@ -65,9 +67,8 @@
     <div class="container-fluid map">
         <div class="row">
             <div class="col-xs-12">
-                <div id="googleMap">
-                    
-                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:350px;width:px;'><div id='gmap_canvas' style='height:350px;width:px;'></div><div><small><a href="http://www.googlemapsgenerator.com/en/">Quickly generate and embed a Google Map on your site!									Click here									Visit our website</a></small></div><div><small><a href="https://mrdiscountcode.hk/">expedia voucher</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(42.6730297,23.303720699999985),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(42.6730297,23.303720699999985)});infowindow = new google.maps.InfoWindow({content:'<strong>STS 2017 ltd.</strong><br>zh.k. Strelbishte 88-V, Sofia, Bulgaria<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                <div id="googleMap">                    
+                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:350px;width:100%;'><div id='gmap_canvas' style='height:350px;width:100%;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(42.6730297,23.303720699999985),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(42.6730297,23.303720699999985)});infowindow = new google.maps.InfoWindow({content:'<strong>STS 2017 ltd.</strong><br>zh.k. Strelbishte 88-V, Sofia, Bulgaria<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
                 </div>
             </div>
         </div>

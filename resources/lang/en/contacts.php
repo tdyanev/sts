@@ -1,7 +1,7 @@
  <?php
 
 return [
-
+    'title' => 'Contacts',
     'name' => 'Name',
     'pl-name' => 'Enter name',
     'email' => 'E-mail',

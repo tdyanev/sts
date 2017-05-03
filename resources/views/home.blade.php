@@ -61,6 +61,7 @@
             </div>
         </div>
     </article>
+    <!--
     <article class="article-sumed">
         <div class="container latest-projects">
             <h2>@lang('home.projects')</h2>
@@ -68,7 +69,8 @@
                 <div class="col-sm-8">
                     <h3><strong>International Business &amp; Consultation</strong></h3>
                     <p>
-                        <?php
+                        <?php 
+                        /*
                         $text = "Company web site for business consultations and administration.Company web site for business consultations and administration.Company web site for business consultations and administration.<br/><br/> Technologies used: Wordpress. Installed
                         plugins: list with plugins to be done.";
                         if(strlen($text) > 300) {
@@ -76,7 +78,8 @@
                         } else {
                             echo $text;
                         }
-                    ?>  
+                        */
+                        ?>  
                     </p>
                     <a href="#" title="" class="read-more pull-left">@lang('home.read')</a>
                 </div>
@@ -86,5 +89,6 @@
             </div>
         </div>
     </article>
+    -->
 </section>
 @endsection
