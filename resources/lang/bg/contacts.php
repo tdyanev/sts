@@ -1,7 +1,7 @@
  <?php
 
 return [
-
+    'title' => 'Контакти',
     'name' => 'Име',
     'pl-name' => 'Въведете име',
     'email' => 'E-mail',

@@ -1,6 +1,6 @@
 header {
     border-top: 7px solid $gray-custom;
-    margin-bottom: 3*$distance;
+    margin-bottom: $distance;
     
     .wide-header {
         border-bottom: 2px solid $laravel-border-color;
@@ -148,7 +148,6 @@ header {
     .header-color {
         background: $link-default-hover-color;
         height: 90px;
-        margin-bottom: 2*$distance;
         
         h1 {
             padding: 0;

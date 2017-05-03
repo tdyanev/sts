@@ -1,6 +1,6 @@
 .section-services {
     background-image: url(/images/background-light.png);
-    margin: 3*$distance 0;
+    margin: 2*$distance 0;
     padding: 3*$distance 0;
     
     .box {
@@ -89,7 +89,7 @@
     
     .read-more {
         background: $link-default-hover-color;
-        border: 1px solid $link-default-hover-color;
+        //border: 1px solid $link-default-hover-color;
         color: #fff;
         font-weight: bold;
         margin-bottom: $distance/2;
