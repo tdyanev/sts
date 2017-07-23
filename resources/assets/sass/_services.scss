@@ -18,7 +18,9 @@
     .line:first-child { margin-top: 0; }
     
     .list-item {
-        color: $link-default-hover-color;
+        color: $second-color; //$link-default-hover-color;
+        font-size: 19px;
+        font-weight: bold;
         margin-top: $distance;
         text-indent: $distance;
     }
@@ -34,7 +36,7 @@
         font-weight: bold;
         
         a {
-            display: block;
+            //display: block;
         }
     }
     
@@ -45,3 +47,5 @@
         margin-top: 2*$distance;
     }
 }
+
+.orange-text { color: $second-color; }

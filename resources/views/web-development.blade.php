@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-
 <section>
     <div class="container services">
         <div class="row">

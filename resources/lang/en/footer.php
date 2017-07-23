@@ -8,5 +8,5 @@ return [
     'city' => 'Sofia',
     'country' => 'Bulgaria',
     'address' => 'Strelbishte, bl.88',
-    'copyright' => 'All rights reserved.'
+    'copyright' => 'ltd. All rights reserved.'
 ];

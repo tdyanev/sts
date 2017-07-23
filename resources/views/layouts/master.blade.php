@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 logo">
                         <a href="/" title="Home">
-                            <img src="/images/logo.svg" alt="logo" />
+                            <img src="/images/logo2.svg" alt="logo" />
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 contact">
@@ -126,7 +126,7 @@
                 <div class="col-sm-4 col-xs-12">
                     <ul class="social-networks">
                         <li>
-                            <a class="facebook" href="#" title="Facebook">
+                            <a class="facebook" href="https://web.facebook.com/STSolutions-275319616267595/" title="Facebook">
                                 <i class="fa fa-facebook"></i>
                             </a>
                         </li>
@@ -149,13 +149,13 @@
                         <li><span class="p-locality">@lang('footer.city')</span>, <span class="p-country-name">@lang('footer.country')</span></li>
                         <li><span class="p-street-address">@lang('footer.address')</span></li>
                         <li><span class="p-tel">+359 883 472 597</span></li>
-                        <li><span class="u-email">office@sts2017.com</span></li>
+                        <li><span class="u-email">office@sts-bg.eu</span></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
-            <p>&#169; STS 2017. @lang('footer.copyright')</p>
+            <p>&#169; STS 2017 @lang('footer.copyright')</p>
         </div>
     </footer>
     @show
