@@ -67,8 +67,28 @@
     <div class="container-fluid map">
         <div class="row">
             <div class="col-xs-12">
-                <div id="googleMap">                    
+                <div id="googleMap">
+                    <div id="map"></div>
+                    <script>
+                        function initMap() {
+                            var uluru = {lat: 42.6730336, lng: 23.3038};
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                                zoom: 15,
+                                center: uluru
+                            });
+                            var marker = new google.maps.Marker({
+                                position: uluru,
+                                map: map
+                            });
+                        }
+                    </script>
+
+                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrnQLSW1AzkuJcY49MQBd-fxF2Ng7RddI&callback=initMap"
+                            type="text/javascript">
+                    </script>
+                    <!-- AIzaSyDrnQLSW1AzkuJcY49MQBd-fxF2Ng7RddI 
                     <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:350px;width:100%;'><div id='gmap_canvas' style='height:350px;width:100%;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(42.6730297,23.303720699999985),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(42.6730297,23.303720699999985)});infowindow = new google.maps.InfoWindow({content:'<strong>STS 2017 ltd.</strong><br>zh.k. Strelbishte 88-V, Sofia, Bulgaria<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                    -->
                 </div>
             </div>
         </div>
