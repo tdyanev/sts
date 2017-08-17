@@ -20,6 +20,10 @@ class PageController extends CrudController
                 'editable' => false,
             ]),
 
+            new Form\StringField('uri', 'URI', [
+                'sortable' => true,
+            ]),
+
             new Form\StringField('title', 'Title', [
                 'sortable' => true,
                 //'validation' => 'required|max:255',
@@ -59,6 +63,7 @@ class PageController extends CrudController
 
         $this->validate($request, [
             'title' => 'required|max:255',
+            'uri' => 'required|max:25',
             'text' => 'required',
         ]);
     }
