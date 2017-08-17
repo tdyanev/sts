@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', __('nav.home'))
+
 @section('content')
 <section>
     <div class="container-fluid section-services">

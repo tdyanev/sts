@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title')</title>
+    <title>@yield('title') | STS Solutions</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet" />
