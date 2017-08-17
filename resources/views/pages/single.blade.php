@@ -5,7 +5,7 @@
 @section('content')
 
 <section>
-    <div class="container project">
+    <div class="container">
         <div class="row">
             <div class="col-sm-6 col-xs-12">
 

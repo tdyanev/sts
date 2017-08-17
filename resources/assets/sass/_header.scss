@@ -10,6 +10,7 @@ header {
         .logo img {
             height: 45px;
             margin-top: 3*$distance;
+            margin-left: -4px;
             width: 200px;
         }
         
@@ -147,7 +148,7 @@ header {
     
     .header-color {
         background: $link-default-hover-color;
-        height: 90px;
+        //height: 90px;
         
         h1 {
             padding: 0;
@@ -226,6 +227,7 @@ header {
     
     @media (max-width: 399px) {
         h1 {
+            font-size: 30px;
             padding: $distance;
         }
     }
