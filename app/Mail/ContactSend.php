@@ -30,6 +30,9 @@ class ContactSend extends Mailable
      */
     public function build()
     {
-        return $this->view('mails.contact')->with('data', $this->data);
+
+        return $this->from($this->data['email'], $this->data['name'])
+            ->subject($this->data['subject'])
+            ->view('mails.contact')->with('data', $this->data);
     }
 }

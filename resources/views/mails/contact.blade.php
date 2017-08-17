@@ -1,1 +1,1 @@
-<p>{{ $data['name'] }}</p>
+<div>{{ $data['message'] }}</div>

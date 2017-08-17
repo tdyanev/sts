@@ -29,8 +29,14 @@ class HomeController extends Controller
     }
 
     public function contacts_send(Request $request) {
-        \Mail::to('tdyanev@gmail.com')->send(new ContactSend([
+        $receiver = env('MAIL_USERNAME');
+
+        \Mail::to($receiver)->send(new ContactSend([
+
             'name' => $request->name,
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'message' => $request->message,
         ]));
 
         return back();
