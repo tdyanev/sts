@@ -11,9 +11,8 @@
     <title>@yield('title')</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet" />    
-    <link href="/css/animate.css" rel="stylesheet" />    
-    <link href="/css/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">  
+    <link href="/css/app.css" rel="stylesheet" />
+    <link href="/css/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -35,9 +34,9 @@
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 contact">
-                        <div class="pull-right text-center"> 
+                        <div class="pull-right text-center">
                             <span class="locale">@component('locale') @endcomponent </span>
-                            <br/> 
+                            <br/>
                             <span class="first-color">Contact us on</span>
                             <br />
                             <span class="second-color"><a href="tel:+359883472597">+359 883 472 597</a></span>
@@ -64,15 +63,15 @@
                             <li><a href="/{{ App::getlocale() }}/web" title="Web Development">@lang('nav.dev')</a></li>
                             <li><a href="/{{ App::getlocale() }}/design" title="Design">@lang('nav.design')</a></li>
                             <li><a href="/{{ App::getlocale() }}/seo">@lang('nav.seo')</a></li>
-                            <li><a href="/{{ App::getlocale() }}/team" title="Team">@lang('nav.team')</a></li>
-                            <li><a href="/{{ App::getlocale() }}/projects" title="Projects">@lang('nav.projects')</a></li>
+                            <!--<li><a href="/{{ App::getlocale() }}/team" title="Team">@lang('nav.team')</a></li>
+                            <li><a href="/{{ App::getlocale() }}/projects" title="Projects">@lang('nav.projects')</a></li>-->
                             <li><a href="/{{ App::getlocale() }}/contacts" title="Contacts">@lang('nav.contacts')</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
-        
+
         @if (Request::segment(2) == '')
         <div class="header-image container-fluid">
             <div class="blurred">
@@ -99,13 +98,13 @@
         @endif
 
     </header>
-    
+
     @show
     <main>
         @yield('content')
     </main>
     @section('footer')
-    
+
     <footer>
         <div class="container">
             <div class="row">
@@ -159,7 +158,7 @@
         </div>
     </footer>
     @show
-  
+
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 </body>

@@ -39,7 +39,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                
+
             </div>
         </div>
     </div>
@@ -79,7 +79,7 @@
                 <div class="col-sm-8">
                     <h3><strong>International Business &amp; Consultation</strong></h3>
                     <p>
-                        <?php 
+                        <?php
                         /*
                         $text = "Company web site for business consultations and administration.Company web site for business consultations and administration.Company web site for business consultations and administration.<br/><br/> Technologies used: Wordpress. Installed
                         plugins: list with plugins to be done.";
@@ -89,7 +89,7 @@
                             echo $text;
                         }
                         */
-                        ?>  
+                        ?>
                     </p>
                     <a href="#" title="" class="read-more pull-left">@lang('home.read')</a>
                 </div>

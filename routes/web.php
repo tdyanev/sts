@@ -19,18 +19,23 @@ Route::group([
 ], function() {
 
 	Route::get('/', 'HomeController@index');
+
+    /*
 	Route::resource('projects', 'ProjectController', [
 		'only' => [ 'index', 'show']
-	]);
+    ]);
+     */
 
     foreach (config('app.custom.pages') as $page) {
         Route::get('/' . $page, 'PageController@show');
     }
 
 
+    /*
     Route::get('/team', function(){
     	return view('team');
-	});
+    });
+     */
 
 
 
@@ -50,7 +55,7 @@ Route::group([
 	'as' => 'panel.',
 	'namespace' => 'Panel',
 	'middleware' => 'auth',
-], function() {	
+], function() {
 	Route::get('/home', 'HomeController@index')->name('home');
 	Route::resource('projects', 'ProjectController');
 	Route::resource('blogs', 'BlogController');
