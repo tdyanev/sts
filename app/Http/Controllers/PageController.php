@@ -33,7 +33,7 @@ class PageController extends Controller
         // \App::getLocale());
 
         $data = Page::where([
-            'title' => $request->segment(2),
+            'uri' => $request->segment(2),
             'locale_id' => $locale_id,
         ])->first() ?? new Page;
 

@@ -43,6 +43,7 @@ Route::group([
 });
 
 
+#admin stuff
 
 Route::group([
 	'prefix' => 'panel',
