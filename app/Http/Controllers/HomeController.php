@@ -31,13 +31,18 @@ class HomeController extends Controller
     public function contacts_send(Request $request) {
         $receiver = env('MAIL_USERNAME');
 
-        \Mail::to($receiver)->send(new ContactSend([
+        \Mail::to($receiver)
+            ->send(new ContactSend([
 
-            'name' => $request->name,
-            'email' => $request->email,
-            'subject' => $request->subject,
-            'message' => $request->message,
-        ]));
+                'name' => $request->name,
+                'email' => $request->email,
+                'subject' => $request->subject,
+                'message' => $request->message,
+            ]));
+
+        $request->session()
+            ->flash('mail_status', count(Mail::failures()) > 0);
+
 
         return back();
     }
