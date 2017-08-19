@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use Illuminate\Http\Request;
 use App\Mail\ContactSend;
 
@@ -29,9 +30,9 @@ class HomeController extends Controller
     }
 
     public function contacts_send(Request $request) {
-        $receiver = env('MAIL_USERNAME');
+        $receiver = env('MAIL_RECEIVER', 'tdyanev@gmail.com');
 
-        \Mail::to($receiver)
+        Mail::to($receiver)
             ->send(new ContactSend([
 
                 'name' => $request->name,
@@ -41,7 +42,7 @@ class HomeController extends Controller
             ]));
 
         $request->session()
-            ->flash('mail_status', count(Mail::failures()) > 0);
+            ->flash('mail_status', count(Mail::failures()) == 0);
 
 
         return back();
