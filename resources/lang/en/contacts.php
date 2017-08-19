@@ -2,6 +2,7 @@
 
 return [
     'title' => 'Contacts',
+    'ct_success' => 'The message was sent successfully!',
     'name' => 'Name',
     'pl-name' => 'Enter name',
     'email' => 'E-mail',
