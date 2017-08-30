@@ -35,7 +35,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 contact">
                         <div class="pull-right text-center">
-                            <span class="locale">@component('locale') @endcomponent </span>
+                            <div class="locale">@component('locale') @endcomponent </div>
                             <br/>
                             <span class="first-color">Contact us on</span>
                             <br />
@@ -140,7 +140,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a href="/contacts" title="Contact us" class="btn btn-custom" type="button">@lang('footer.contact-us')</a>
+                    <a href="/contacts" title="Contact us" class="btn btn-custom">@lang('footer.contact-us')</a>
                 </div>
                 <div class="col-sm-4 col-xs-12 contacts text-right h-card">
                     <h3>@lang('footer.contacts')</h3>

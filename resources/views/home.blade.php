@@ -12,7 +12,7 @@
                         <i class="fa fa-line-chart fa-3x" aria-hidden="true"></i>
                         <h2>@lang('home.seo')</h2>
                         <p>@lang('home.seo-text')</p>
-                        <a href="/{{ App::getlocale() }}/seo" title="" class="box-bottom">@lang('home.more')</a>
+                        <a href="/{{ App::getlocale() }}/seo" title="@lang('home.seo')" class="box-bottom">@lang('home.more')</a>
                     </div>
                 </div>
                 <div class="col-sm-4 col-xs-12">
@@ -21,7 +21,7 @@
                         <i class="fa fa-mobile fa-3x" aria-hidden="true"></i>
                         <h2>@lang('home.web')</h2>
                         <p>@lang('home.web-text')</p>
-                        <a href="/{{ App::getlocale() }}/web" title="" class="box-bottom">@lang('home.more')</a>
+                        <a href="/{{ App::getlocale() }}/web" title="@lang('home.web')" class="box-bottom">@lang('home.more')</a>
                     </div>
                 </div>
                 <div class="col-sm-4 col-xs-12">
@@ -29,7 +29,7 @@
                         <i class="fa fa-cubes fa-3x" aria-hidden="true"></i>
                         <h2>@lang('home.design')</h2>
                         <p>@lang('home.design-text')</p>
-                        <a href="/{{ App::getlocale() }}/design" title="" class="box-bottom">@lang('home.more')</a>
+                        <a href="/{{ App::getlocale() }}/design" title="@lang('home.design')" class="box-bottom">@lang('home.more')</a>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
             </div>
         </div>
     </article>
-    <!--
+    
     <article class="article-sumed">
         <div class="container latest-projects">
             <h2>@lang('home.projects')</h2>

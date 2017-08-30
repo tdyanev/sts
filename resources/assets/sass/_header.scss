@@ -24,25 +24,29 @@ header {
             .second-color a:hover { text-decoration: none; cursor: default; }
         }
         
-        .locale ul {
+        .locale {
+            display: inline;
             
-            li {
-                border-right: 2px solid $second-color;
-                margin-right: $distance+3;
-                padding-right: $distance;
+            ul {
             
-                a {
-                    color: $link-default-hover-color;
-                    font-size: 14px;
+                li {
+                    border-right: 2px solid $second-color;
+                    margin-right: $distance+3;
+                    padding-right: $distance;
+            
+                    a {
+                        color: $link-default-hover-color;
+                        font-size: 14px;
+                    }
+                
+                    a:hover {
+                        text-decoration: none;                    
+                    }
                 }
                 
-                a:hover {
-                    text-decoration: none;                    
+                li:last-child {
+                    border-right: none;
                 }
-            }
-            
-            li:last-child {
-                border-right: none;
             }
         }
         
