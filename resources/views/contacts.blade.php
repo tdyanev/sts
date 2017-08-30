@@ -41,7 +41,7 @@
                             <label for="subject">
                                 @lang('contacts.subject')
                             </label>
-                            <input type="text" name="subject" class="form-control" id="name" placeholder="@lang('contacts.pl-subject')" required="required" />
+                            <input type="text" name="subject" class="form-control" id="subject" placeholder="@lang('contacts.pl-subject')" required="required" />
                         </div>
                     </div>
                     <div class="col-sm-2"></div>
